@@ -1,1 +1,24 @@
+# local varable
+# use $CSP to use the value
+# CSP= to change the value
+CSP=~/CloudStudio
+
+# set CSP to global varable
+export CSP
+
+# show all varables
 set
+
+# delet varable
+unset variable
+
+# show golbal varables
+env
+
+
+
+#create a soft link
+ln -s fillename linkname
+
+#remove link
+rm -rf linkname
