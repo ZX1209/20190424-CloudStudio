@@ -22,3 +22,10 @@ ln -s fillename linkname
 
 #remove link
 rm -rf linkname
+
+# show invisiable characters
+cat -A filenaem
+
+# get the 4th colume
+ask '{print $4}' filename
+
