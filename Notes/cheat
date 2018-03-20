@@ -1,18 +1,3 @@
-# To see example usage of a program:
-cheat <command>
-
-# To edit a cheatsheet
-cheat -e <command>
-
-# To list available cheatsheets
-cheat -l
-
-# To search available cheatsheets
-cheat -s <command>
-
-# To get the current `cheat' version
-cheat -v
-
 
 #Personal cheatsheets are saved in the ~/.cheat directory by default
 #but you can specify a different default
@@ -28,4 +13,10 @@ export CHEATPATH="$CHEATPATH:/path/to/more/cheats"
 #To enable syntax highlighting, export a CHEATCOLORS environment variable:
 export CHEATCOLORS=true
 
+export NOTES-MY='~/CloudStudio/Notes'
+export DEFAULT_CHEAT_DIR=$NOTES-MY
 
+export NOTES-OTHERS='~/CloudStudio/Notes/notes-others'
+export CHEATPATH=$NOTES-OTHERS
+
+export CHEATCOLORS=true
