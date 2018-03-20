@@ -1,0 +1,11 @@
+#install
+sudo apt-get install cron
+
+#start
+service cron start
+
+#if it is work
+pgrep cron
+
+#use manage
+crontab
