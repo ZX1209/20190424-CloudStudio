@@ -4,7 +4,42 @@
 
 #搜索字符串
 /search
+#为命令、输入、导航都激活鼠标的使用
+:set mouse = a
 
+#窗口
+##打开关闭命令
+:sp[ lit] {file}     水平分屏
+:new {file}         水平分屏
+:sv[ iew] {file}     水平分屏，以只读方式打开
+:vs[ plit] {file}    垂直分屏
+:clo[ se]            关闭当前窗口
+
+##打开关闭快捷键
+Ctrl+w s        水平分割当前窗口
+Ctrl+w v        垂直分割当前窗口
+Ctrl+w q        关闭当前窗口
+Ctrl+w n        打开一个新窗口（空文件）
+Ctrl+w o        关闭出当前窗口之外的所有窗口
+Ctrl+w T        当前窗口移动到新标签页
+
+##切换窗口
+Ctrl+w h        切换到左边窗口
+Ctrl+w j        切换到下边窗口
+Ctrl+w k        切换到上边窗口
+Ctrl+w l        切换到右边窗口
+Ctrl+w w        遍历切换窗口
+
+##移动窗口
+Ctrl+w H        向左移动当前窗口
+Ctrl+w J        向下移动当前窗口
+Ctrl+w K        向上移动当前窗口
+Ctrl+w L        向右移动当前窗口
+
+##调整大小
+Ctrl+w +        增加窗口高度
+Ctrl+w -        减小窗口高度
+Ctrl+w =        统一窗口高度
 
 
 
