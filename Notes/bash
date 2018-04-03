@@ -84,3 +84,5 @@ echo ${PIPESTATUS[0]}  # replace 0 with N
 ( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
 
 #test this
+
+#赋值等号与命令替换字符之间没有空格!!!!!!!!!!!
