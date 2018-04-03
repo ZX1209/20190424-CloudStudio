@@ -1,3 +1,5 @@
+#ln -s test two
+#ln -s teset
 # bind Ctrl-t to prefix
 unbind C-b
 set -g prefix C-t
