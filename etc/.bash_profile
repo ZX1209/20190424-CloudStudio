@@ -23,5 +23,5 @@ export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
 
 
 if [ -f ~/.bashrc ] ; then
-   . ./.bashrc
+   . ~/.bashrc
 fi
