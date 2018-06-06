@@ -1,4 +1,4 @@
-cd ~/CloudStudio && git pull && echo -e "git pull success" || echo -e "not pull"
+(cd ~/CloudStudio && git pull && echo -e "git pull success" || echo -e "not pull")
 
 #将云核可执行文件加入系统路径
 PATH=$PATH:~/CloudStudio/bin

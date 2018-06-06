@@ -20,3 +20,4 @@ export NOTES-OTHERS='~/CloudStudio/Notes/notes-others'
 export CHEATPATH=$NOTES-OTHERS
 
 export CHEATCOLORS=true
+export CHEAT_EDITOR=vim

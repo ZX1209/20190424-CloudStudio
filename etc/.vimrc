@@ -3,9 +3,9 @@ set autoindent
 set smartindent
 
 "tab 宽度 与转换
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 "显示行号
@@ -39,3 +39,8 @@ set encoding=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set fileencodings=utf-8,ucs-bom,chinese
 
+"粘贴
+set pastetoggle=<F9>
+
+" colorscheme murphy
+colorscheme default
