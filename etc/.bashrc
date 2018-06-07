@@ -130,4 +130,4 @@ export CHEAT_EDITOR=vim
 (cd ~/CloudStudio && git add --all && git commit -m "auto commit by .bashrc" && git pull && git push)
 
 
-
+export PATH=$PATH:~/CloudStudio/bin

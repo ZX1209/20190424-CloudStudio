@@ -5,11 +5,9 @@ currentdir=`pwd`
 
 echo "parament is $#\n"
 
-for gitrepo in ~/CloudStudio ~/lady-linemark;
+for gitrepo in ~/CloudStudio ;
   do
-    cd $gitrepo &&
-    git pull  &&
-    git add --all && echo "$gitrepo:status:\n" ; git status ; echo "\n"     || echo "add failed"
+    (cd $gitrepo && git add --all && git commit -m "auto commit     by git-auto-save.sh" && git pull && git push)
   done
 
 cd $currentdir
