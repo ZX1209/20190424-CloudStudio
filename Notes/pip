@@ -14,6 +14,7 @@ pip install --upgrade SomePackage
 pip freeze > requirements.txt
 pip install -r requirements.txt
 
+#展示 包 细节 (位置,说明)
 # Show details of a package
 pip show SomePackage
 
