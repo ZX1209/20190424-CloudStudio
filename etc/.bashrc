@@ -127,7 +127,14 @@ export CHEAT_EDITOR=vim
 
 #export DISPLAY=:0.0
 
-(cd ~/CloudStudio && git add --all && git commit -m "auto commit by .bashrc" && git pull && git push)
+# (cd ~/CloudStudio && git add --all && git commit -m "auto commit by .bashrc" && git pull && git push)
+(cd ~/CloudStudio && git status )
 
 
 export PATH=$PATH:~/CloudStudio/bin
+
+#cheat path (win sub for linux proble)
+PATH=~/.local/bin:$PATH
+
+
+
