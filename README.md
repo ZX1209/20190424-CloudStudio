@@ -12,4 +12,11 @@ don't retyping and set setting files like .vimrc again and again
 other platform projects but want to edit in my own computer and then synch it
   
   
+## etc
+各种配置文件
 
+## bin
+放实用程序,脚本的地方
+
+## lib
+编程用到的库等等
