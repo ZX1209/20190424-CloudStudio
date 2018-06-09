@@ -1,3 +1,15 @@
+
+#将python3 简写成py
+alias py='python3'
+
+#之后运行脚本什么的 
+py gltest.py
+py
+
+# 显示所有别名
+alias
+
+
 alias aliastest='echo "alias test ok"'
 
 # Show a list of your current shell aliases
