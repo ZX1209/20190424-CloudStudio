@@ -131,10 +131,10 @@ export CHEAT_EDITOR=vim
 (cd ~/CloudStudio && git status )
 
 
-export PATH=$PATH:~/CloudStudio/bin
-
 #cheat path (win sub for linux proble)
-PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 
+# add python script file to syspath
+export PATH=~/CloudStudio/bin/GLpackage:~/CloudStudio/bin:$PATH
 
 
