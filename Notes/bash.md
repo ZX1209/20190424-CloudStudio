@@ -1,3 +1,34 @@
+# local varable
+# use $CSP to use the value
+# CSP= to change the value
+CSP=~/CloudStudio
+
+# set CSP to global varable
+export CSP
+
+# show all varables
+set
+
+# delet varable
+unset variable
+
+# show golbal varables
+env
+
+
+
+#create a soft link
+ln -s fillename linkname
+
+#remove link
+rm -rf linkname
+
+# show invisiable characters
+cat -A filenaem
+
+# get the 4th colume
+ask '{print $4}' filename
+
 #通过使用 <(some command) 可以将输出视为文件。例如，对比本地文件 /etc/hosts 和一个远程文件：
 diff /etc/hosts <(ssh somehost cat /etc/hosts)
 
