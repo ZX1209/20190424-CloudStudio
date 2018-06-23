@@ -11,6 +11,14 @@
 # fixed
 元素会从正常文档流中移除,根据相对窗口定位
 
+
+
+
+
+---
+
+
+
 static
 The element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.
 relative
