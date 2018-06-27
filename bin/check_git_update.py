@@ -1,11 +1,10 @@
-#!/bin/env python
+#!/usr/bin/python3
 
 
-if __name__=='__main__'
 
 git_pull_status=input()
 
-if git_pull_status="":
+if git_pull_status=="this":
     return 0
 else:
     return 1
