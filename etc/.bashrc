@@ -140,4 +140,5 @@ export PATH=~/.local/bin:$PATH
 # add python script file to syspath
 export PATH=~/CloudStudio/bin/GLpackage:~/CloudStudio/bin:$PATH
 
-
+# active autojump
+. /usr/share/autojump/autojump.sh
