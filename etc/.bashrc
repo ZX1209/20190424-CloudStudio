@@ -115,6 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# cheat etc
 export NOTES_MY='~/CloudStudio/Notes'
 export DEFAULT_CHEAT_DIR=$NOTES_MY
 
@@ -124,11 +126,12 @@ export CHEATPATH=$CHEATPATH:$NOTES_OTHERS
 export CHEATCOLORS=true
 
 export CHEAT_EDITOR=vim
+# end cheat etc
 
 #export DISPLAY=:0.0
 
 # (cd ~/CloudStudio && git add --all && git commit -m "auto commit by .bashrc" && git pull && git push)
-(cd ~/CloudStudio && git status )
+(cd ~/CloudStudio && git status && git pull)
 
 
 #cheat path (win sub for linux proble)
