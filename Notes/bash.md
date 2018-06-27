@@ -1,4 +1,11 @@
+## 显示上次程序的返回值
+
+echo $?
+
+
+
 # local varable
+
 # use $CSP to use the value
 # CSP= to change the value
 CSP=~/CloudStudio
