@@ -1,3 +1,35 @@
+## 编译无约束位的代码
+
+gcc -c -Wall -Werror -fpic foo.c
+
+`-fpic`
+
+
+
+## 生成共享库文件
+
+gcc -shared -o libfoo.so foo.o
+
+`-share`
+
+
+
+## 将库放到标准位置并刷新缓存
+
+cp /home/username/foo/libfoo.so /usr/lib
+
+chmod 0755 /usr/lib/libfoo.so
+
+ldconfig
+
+
+
+
+
+
+
+
+
 copyed from https://www.cnblogs.com/ifantastic/p/3526237.html
 
 
