@@ -130,8 +130,9 @@ export CHEAT_EDITOR=vim
 
 #export DISPLAY=:0.0
 
+# 太耗费启动时间了,还是换到crontab 中去吧
 # (cd ~/CloudStudio && git add --all && git commit -m "auto commit by .bashrc" && git pull && git push)
-(cd ~/CloudStudio && git status && git pull)
+#(cd ~/CloudStudio && git status && git pull)
 
 
 #cheat path (win sub for linux proble)
