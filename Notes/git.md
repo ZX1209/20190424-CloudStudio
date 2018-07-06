@@ -1,6 +1,7 @@
 # To set your identity:
-git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
+git config --global user.name "GL"
+git config --global user.email ZXGAOLING@GMAIL.COM
+# i don't use this mail so offen
 
 # 设置git的编辑器(用于commit):
 git config --global core.editor vim
