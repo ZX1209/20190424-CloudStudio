@@ -1,0 +1,14 @@
+import serial
+
+# bind ser to /dev/ttyACM0 115200 
+ser=serial.Serial('/dev/ttyACM0',115200,timeout=1)
+
+# ser read.. 
+ser.readline()
+
+#...
+
+
+# help
+help(ser)
+dir(ser)
