@@ -143,3 +143,9 @@ export PATH=~/CloudStudio/bin/GLpackage:~/CloudStudio/bin:$PATH
 
 # active autojump
 . /usr/share/autojump/autojump.sh
+
+
+# PS1 command line infomation
+# use \[ and \] to close \e[0m(non print character) or it will have cursor proble
+# i don't want to change it any more my eyes are about to bland fuck...
+PS1="\[\e[1;34m\]#\[\e[0m\] \[\e[36m\]\u\[\e[0m\] @ \[\e[32m\]\h\[\e[0m\] in \[\e[1;33m\]\w\[\e[0m\] \[\e[4m\]\A\[\e[0m\]--\d] \[\e[0;31m\]C:$? \[\e[0m\]\n\[\e[1;31m\]\$\[\e[0m\] "

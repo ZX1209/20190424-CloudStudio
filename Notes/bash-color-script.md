@@ -1,7 +1,7 @@
 
 
 ```bash
-signstart="\e["
+signstart="\033\["
 signend="m"
 
 signsplit=";"
@@ -61,7 +61,7 @@ letFdeletline="$signstart$signFdeletline$signend"
 
 none=$Adefault
 setnone=$Adefault
-//none    letAdefault
+#none    letAdefault
 br="\n"
 ```
 
