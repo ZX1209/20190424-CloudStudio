@@ -162,3 +162,15 @@ PS1="\[\e[1;34m\]#\[\e[0m\] \[\e[36m\]\u\[\e[0m\] @ \[\e[32m\]\h\[\e[0m\] in \[\
     tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
     exec tmux
 }
+
+
+ac(){
+    git pull;
+    git add --all;
+    git commit -m "$1"
+    git push;
+}
+
+
+
+
