@@ -149,3 +149,16 @@ export PATH=~/CloudStudio/bin/GLpackage:~/CloudStudio/bin:$PATH
 # use \[ and \] to close \e[0m(non print character) or it will have cursor proble
 # i don't want to change it any more my eyes are about to bland fuck...
 PS1="\[\e[1;34m\]#\[\e[0m\] \[\e[36m\]\u\[\e[0m\] @ \[\e[32m\]\h\[\e[0m\] in \[\e[1;33m\]\w\[\e[0m\] [\[\e[4m\]\A\[\e[0m\] Week:\d] \[\e[0;31m\]  \[\e[0m\]\n\[\e[1;31m\]\$\[\e[0m\] "
+
+
+[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
+    [[ -n "$ATTACH_ONLY" ]] && {
+        tmux a 2>/dev/null || {
+            cd && exec tmux
+        }
+        exit
+    }
+
+    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
+    exec tmux
+}
