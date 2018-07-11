@@ -1,0 +1,1 @@
+https://docs.python.org/3/reference/datamodel.html?highlight=data%20model
