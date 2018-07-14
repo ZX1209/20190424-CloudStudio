@@ -13,11 +13,11 @@ export CHEATPATH="$CHEATPATH:/path/to/more/cheats"
 #To enable syntax highlighting, export a CHEATCOLORS environment variable:
 export CHEATCOLORS=true
 
-export NOTES-MY='~/CloudStudio/Notes'
-export DEFAULT_CHEAT_DIR=$NOTES-MY
+export Notes='~/CloudStudio/Notes'
+export DEFAULT_CHEAT_DIR=$Notes
 
-export NOTES-OTHERS='~/CloudStudio/Notes/notes-others'
-export CHEATPATH=$NOTES-OTHERS
+export OtherNotes='~/CloudStudio/Notes/notes-others'
+export CHEATPATH=$OtherNotes
 
 export CHEATCOLORS=true
 export CHEAT_EDITOR=vim

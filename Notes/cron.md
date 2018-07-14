@@ -1,6 +1,10 @@
 #install
 sudo apt-get install cron
 
+# ubuntu?
+/etc/init.d/cron status
+. . . . 
+
 #
 service crond start //启动服务
 
