@@ -31,6 +31,10 @@ git diff HEAD^ HEAD
 #相对于commit1,commit2有什么改变
 git diff commit1 commit2
 
+# 撤销工作树中的更改
+git checkout -- <file>
+
+
 # To stash changes locally, this will keep the changes in a separate changelist
 # called stash and the working directory is cleaned. You can apply changes
 # from the stash anytime
