@@ -1,9 +1,10 @@
-from logging import 8
+import logging
 
 
-basicConfig(format='%(levelname)s:\033[34m %(message)s\033[0m',level=DEBUG)
+logging.basicConfig(format='%(levelname)s:\033[34m %(message)s\033[0m',
+level=logging.DEBUG)
 
-debug('this is a debug message')
-info('this is a info message')
-warn('this is a warn message')
-error('this is a warn message')
+logging.debug('this is a debug message')
+logging.info('this is a info message')
+logging.warn('this is a warn message')
+logging.error('this is a warn message')
