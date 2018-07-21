@@ -1,4 +1,27 @@
+## basic
+
+grep  "context*"  ./
+
+## -r 
+
+recurse 
+
+
+
+## 通配符
+
+.
+
+*
+
+\d
+
+...
+
+
+
 # Search a file for a pattern
+
 grep pattern file
 
 # Case insensitive search (with line numbers)
