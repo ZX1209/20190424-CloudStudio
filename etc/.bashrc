@@ -148,20 +148,26 @@ export PATH=~/CloudStudio/bin/GLpackage:~/CloudStudio/bin:$PATH
 # PS1 command line infomation
 # use \[ and \] to close \e[0m(non print character) or it will have cursor proble
 # i don't want to change it any more my eyes are about to bland fuck...
-PS1="\[\e[1;34m\]#\[\e[0m\] \[\e[36m\]\u\[\e[0m\] @ \[\e[32m\]\h\[\e[0m\] in \[\e[1;33m\]\w\[\e[0m\] [\[\e[4m\]\A\[\e[0m\] Week:\d] \[\e[0;31m\]  \[\e[0m\]\n\[\e[1;31m\]\$\[\e[0m\] "
+# PS1="\[\e[1;34m\]#\[\e[0m\] \[\e[36m\]\u\[\e[0m\] @ \[\e[32m\]\h\[\e[0m\] in \[\e[1;33m\]\w\[\e[0m\] [\[\e[4m\]\A\[\e[0m\] Week:\d] \[\e[0;31m\]  \[\e[0m\]\n\[\e[1;31m\]\$\[\e[0m\] "
 
 
-[[ -z "$TMUX" && -n "$USE_TMUX" ]] && {
-    [[ -n "$ATTACH_ONLY" ]] && {
-        tmux a 2>/dev/null || {
-            cd && exec tmux
-        }
-        exit
-    }
+# 放到你的配置文件中，给 man 增加漂亮的色彩高亮
+export LESS_TERMCAP_mb=$'\E[1m\E[32m'
+export LESS_TERMCAP_mh=$'\E[2m'
+export LESS_TERMCAP_mr=$'\E[7m'
+export LESS_TERMCAP_md=$'\E[1m\E[36m'
+export LESS_TERMCAP_ZW=""
+export LESS_TERMCAP_us=$'\E[4m\E[1m\E[37m'
+export LESS_TERMCAP_me=$'\E(B\E[m'
+export LESS_TERMCAP_ue=$'\E[24m\E(B\E[m'
+export LESS_TERMCAP_ZO=""
+export LESS_TERMCAP_ZN=""
+export LESS_TERMCAP_se=$'\E[27m\E(B\E[m'
+export LESS_TERMCAP_ZV=""
+export LESS_TERMCAP_so=$'\E[1m\E[33m\E[44m'
 
-    tmux new-window -c "$PWD" 2>/dev/null && exec tmux a
-    exec tmux
-}
+
+
 
 
 ac(){
@@ -170,5 +176,29 @@ ac(){
 }
 
 
+tput sgr0; # reset colors
+bold=$(tput bold);
+reset=$(tput sgr0);
+# Solarized colors, taken from http://git.io/solarized-colors.
+black=$(tput setaf 0);
+blue=$(tput setaf 27);
+cyan=$(tput setaf 44);
+green=$(tput setaf 46);
+orange=$(tput setaf 208);
+purple=$(tput setaf 93);
+red=$(tput setaf 161);
+violet=$(tput setaf 63);
+white=$(tput setaf 15);
+yellow=$(tput setaf 227);
 
+PS1="\[${blue}\]# \[${reset}\]"
+PS1+="\[${cyan}\]\u \[${reset}\]"
+PS1+="@ "
+PS1+="\[${green}\]\h \[${reset}\]"
+PS1+="in "
+PS1+="\[${blue}\]\w \[${reset}\]"
+PS1+="\[${white}\][\A Week:\d]\[${reset}\]"
+PS1+="\n"
+PS1+="\[${orange}\]\$\[${reset}\] "
 
+export PS1
