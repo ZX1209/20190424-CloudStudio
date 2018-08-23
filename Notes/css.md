@@ -3,6 +3,15 @@
 float:left
 > 或者是什么grid的,,不怎么用呢...
 
+# 字体大小
+font-size
+
+#阴影  圆角
+border-radius:5px;
+
+box-shadow: 2px 2px 5px #000;
+
+transform: rotate(45deg); & transform-origin: 250px 150px;
 
 
 

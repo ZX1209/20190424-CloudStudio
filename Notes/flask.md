@@ -15,6 +15,7 @@ flask run --host=0.0.0.0
 
 #dev mode (auto restart and load changed file)
 export FALSK_ENV=development
+export FLASK_DEBUG=1
 
 
 # run on the internet rather locally
@@ -23,3 +24,5 @@ flask run --host=0.0.0.0
 
 #run on python3 interpreter
 app.run(debug=True,host='0.0.0.0',port='10001')
+
+
