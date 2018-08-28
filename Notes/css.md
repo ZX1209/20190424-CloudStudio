@@ -45,7 +45,7 @@ transform: rotate(45deg); & transform-origin: 250px 150px;
 ```
 
 
-
+absolute 中的 absolute 相当于   revelate 呢
 
 
 

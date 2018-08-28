@@ -1,7 +1,6 @@
 错误创建：myList = [[0] * 3] * 4
 
-原因：*4只是把一维数组复制了四次引用。如果修改`mylist[0][1]`的值，`mylist[2][1]`、`mylist[3][1]`、`mylist[4][1]`的值都会变。
-
+原因：*4只是把一维数组复制了四次引用。如果修改`mylist[0][1]`的值，`mylist[2][1]`、`mylist[3][1]`、`mylist[4][1]`的值都会变.*
 
 # 更新引用和改变引用
 ```python
@@ -17,7 +16,7 @@ easy_set = sets[0]
 
 for tmpi in range(1,len(sets)):
     hard_set &= sets[tmpi]
-    easy_set | sets[tmpi]
+    easy_set |= sets[tmpi]
 print(hard_set)
 print(easy_set)
 
