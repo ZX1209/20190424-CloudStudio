@@ -121,7 +121,7 @@ export NOTES_MY='~/CloudStudio/Notes'
 export DEFAULT_CHEAT_DIR=$NOTES_MY
 
 export NOTES_OTHERS='~/CloudStudio/Notes/notes-others'
-export CHEATPATH=$CHEATPATH:$NOTES_OTHERS
+export CHEATPATH=$NOTES_MY:$NOTES_OTHERS
 
 export CHEATCOLORS=true
 

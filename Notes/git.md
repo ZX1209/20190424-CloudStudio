@@ -12,12 +12,19 @@ git config --global color.ui true
 #保存密码到硬盘
 git config credential.helper store
 
+# 强制lf
+git config --global core.autocrlf input
 
 # To stage all changes for commit:
 git add --all
 
 # 快速commit
 git commit -m "Your commit message"
+
+# config file
+/etc/gitconfig
+`~/.gitconfig`
+.git/config
 
 
 #优化log显示
@@ -34,7 +41,8 @@ git diff commit1 commit2
 # 撤销工作树中的更改
 git checkout -- <file>
 
-
+# 撤销暂存区的更改
+git reset HEAD [file]
 # To stash changes locally, this will keep the changes in a separate changelist
 # called stash and the working directory is cleaned. You can apply changes
 # from the stash anytime

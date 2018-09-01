@@ -11,6 +11,8 @@ datetime.datetime.time(hour,minute,second,microseconds)
 
 dateime.datetime.datetime(....)
 
+# 获取现在的日期时间
+datetime.now().isoformat()
 
 
 ## 时间间隔 类型

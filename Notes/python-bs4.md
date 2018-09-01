@@ -5,6 +5,8 @@ soup = BeautifulSoup(html_string)
 
 # css 选择器器语法,,不怎么好用
 r = soup.select("")
+r[0].text
 
 # 另一种,还行.. 
 r2 = soup.find_all('div',id="search")
+

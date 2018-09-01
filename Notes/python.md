@@ -19,6 +19,10 @@ Python除了def/class/lambda 外，其他如: if/elif/else/ try/except for/while
 
 # all & any
 
+#int & format
+int('00100',2)
+
+
 ```python
 s = "0123456789"
 

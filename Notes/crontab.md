@@ -1,6 +1,9 @@
 #start cron 
 service cron start
 
+#
+/dev/tty
+
 usage: crontab [-u user] file
        crontab [ -u user] [ -i ] { -e | -l | -r }
                (default operation is replace, per 1003.2)
