@@ -1,3 +1,6 @@
+#
+pip install pycallgraph
+
 Project Abandoned
 Many apologies. I've stopped maintaining this project due to personal time constraints. Blog post with more information.
 
