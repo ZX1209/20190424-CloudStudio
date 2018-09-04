@@ -1,5 +1,17 @@
-#
+# 安装
 pip install pycallgraph
+
+# cli 使用
+pycallgraph graphviz -- ./mypythonscript.py
+
+# A simple use of the API is:
+```python
+from pycallgraph import PyCallGraph
+from pycallgraph.output import GraphvizOutput
+
+with PyCallGraph(output=GraphvizOutput()):
+    code_to_profile()
+```
 
 Project Abandoned
 Many apologies. I've stopped maintaining this project due to personal time constraints. Blog post with more information.
