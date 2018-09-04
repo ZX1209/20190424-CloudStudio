@@ -25,7 +25,7 @@ $0 is the name of the shell or shell script.
 
 # use $CSP to use the value
 # CSP= to change the value
-CSP=~/CloudStudio
+CSP=`~`/CloudStudio
 
 # set CSP to global varable
 export CSP
