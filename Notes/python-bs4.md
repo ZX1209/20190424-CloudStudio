@@ -3,11 +3,12 @@ pip3 install bs4
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_string)
 
-# css 选择器器语法,,不怎么好用
+# css 选择器器语法,,~~不怎么好用~~ 真香
 r = soup.select("")
 r[0].text
+r.span.attrs['style'] = "..."
 
-# attr
+# attrs
 
 # decode
 
