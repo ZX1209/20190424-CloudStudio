@@ -7,6 +7,10 @@ soup = BeautifulSoup(html_string)
 r = soup.select("")
 r[0].text
 
+# attr
+
+# decode
+
 # 另一种,还行.. 
 r2 = soup.find_all('div',id="search")
 
