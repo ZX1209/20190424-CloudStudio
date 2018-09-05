@@ -11,6 +11,9 @@ r[0].text
 
 # decode
 
+# node.node.node
+quote.span.attrs
+
 # 另一种,还行.. 
 r2 = soup.find_all('div',id="search")
 
