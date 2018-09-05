@@ -1,3 +1,21 @@
+# 安装
+pip install pyecharts
+
+# Install data extensions:
+pip install echarts-cities-pypkg
+
+# Render to Local Html File
+```python
+from pyecharts import Bar
+
+attr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+v1 = [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+v2 = [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+bar = Bar("Bar chart", "precipitation and evaporation one year")
+bar.add("precipitation", attr, v1, mark_line=["average"], mark_point=["max", "min"])
+bar.add("evaporation", attr, v2, mark_line=["average"], mark_point=["max", "min"])
+bar.render()
+```
 Introduction
 Echarts is an open source library from Baidu for data visualization in javascript. It has awesome demo pages so I started to look out for an interface library so that I could use it in Python. I ended up with echarts-python on github but it lacks of documentation and was not updated for a while. Just like many other Python projects, I started my own project, pyecharts, referencing echarts-python and another library pygal.
 
