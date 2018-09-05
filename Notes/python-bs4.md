@@ -13,6 +13,7 @@ r[0].text
 
 # node.node.node
 quote.span.attrs
+tag.tag.attrs
 
 # 另一种,还行.. 
 r2 = soup.find_all('div',id="search")
