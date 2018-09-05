@@ -23,7 +23,7 @@ CREATE TABLE database_name.table_name(
 # 自增主键
 ID INTEGER PRIMARY KEY NOT NULL
 
-# 自增插入
+## 自增插入
 insert into QUOTES(QUOTE) values(?)
 
 # 插入
