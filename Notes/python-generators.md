@@ -1,1 +1,7 @@
-yeild 
+# yield
+
+# yield from
+
+# next()
+
+# iter()
