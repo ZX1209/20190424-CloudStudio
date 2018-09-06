@@ -3,8 +3,35 @@
 # 强行空格
 &nbsp;或全角空格符
 
+# 水平线
+<hr />
+
+# 列表
+ol
+type = 1/a/A/i/I
+
+ul
+dir
+meau
+
+# 封装
+div
+span 
+display:inline,block,inline-block
+
+
 # 换行
 <br />
+
+# 表格
+table
+caption: 标题
+tr: 行
+th: 表头
+td: 单元格
+
+rowspan
+colspan
 
 # placeholder 
 # 输入框提示信息
