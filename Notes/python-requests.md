@@ -6,3 +6,9 @@ requests.get('http://www.google.com',proxies=proxies)
 
 // ok
 
+# download file
+r = requests.get(settings.STATICMAP_URL.format(**data), stream=True)
+if r.status_code == 200:
+    with open(path, 'wb') as f:
+        for chunk in r.iter_content(1024):
+            f.write(chunk)
