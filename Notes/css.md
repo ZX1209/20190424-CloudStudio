@@ -13,6 +13,8 @@ box-shadow: 2px 2px 5px #000;
 transform: rotate(45deg); & transform-origin: 250px 150px;
 
 
+# 线性变换
+style="background-image: linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%)"
 
 
 ## inline css     (内联)
