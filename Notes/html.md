@@ -3,6 +3,9 @@
 # 强行空格
 &nbsp;或全角空格符
 
+# 换行
+<br />
+
 # placeholder 
 # 输入框提示信息
 <input type="text" placeholder="要显示的文字">
