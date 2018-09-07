@@ -12,8 +12,12 @@ def log(func):
 
 
 def time_ruler(func):
-    def wrapper():
-        
+    import time
+    def wrapper(*args,**kw):
+        start = time.time()
+        func(*args,**kw)
+        print('run time is :',time.time()-start)
+    return wrapper
 
 ```
 
