@@ -1,3 +1,15 @@
+# dir
+```python
+import os
+
+if not os.path.exists('python-spyder-downloads'):
+    os.mkdir('python-spyder-downloads')
+
+newdir = os.path.join(dir_name,'this')
+
+if not os.path.exists(newdir):
+    os.mkdir(newdir)
+```
 os.popen()
 
 
