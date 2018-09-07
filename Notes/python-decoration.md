@@ -9,6 +9,12 @@ def log(func):
         func()
         print('end execute')
     return wrapper
+
+
+def time_ruler(func):
+    def wrapper():
+        
+
 ```
 
 可以看到，`log`函数接收一个函数作为参数，并返回一个新的`wrapper`函数。
