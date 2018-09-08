@@ -1,4 +1,4 @@
-# dir
+# os.path.exists() ; os.mkdir()
 ```python
 import os
 
@@ -9,6 +9,11 @@ newdir = os.path.join(dir_name,'this')
 
 if not os.path.exists(newdir):
     os.mkdir(newdir)
+```
+
+# os.system
+```python
+os.system(r'C:\Users\14049\WordAndStudy\Projects\学校\大三上\数字图像处理\gif\giphy.gif')
 ```
 os.popen()
 
