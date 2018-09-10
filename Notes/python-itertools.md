@@ -1,7 +1,21 @@
+# `itertools.product(*iterables, repeat=1)`
+## 二维遍历
+> product('ABCD', 'xy') --> Ax Ay Bx By Cx Cy Dx Dy
+> product(range(2), repeat=3) --> 000 001 010 011 100 101 110 111
 
-# itertools.combinations
-# 组合,非重复
-itertools.combinations(iterable, r)
+Cartesian product of input iterables.
+Roughly equivalent to nested for-loops in a generator expression. For example, product(A, B) returns the same as ((x,y) for x in A for y in B).
+
+
+
+
+
+# `itertools.combinations(iterable, r)`
+## 排列组合,非重复
+> combinations('ABCD', 2) --> AB AC AD BC BD CD
+> combinations(range(4), 3) --> 012 013 023 123
+
+
 Return r length subsequences of elements from the input iterable.
 
 Combinations are emitted in lexicographic sort order. So, if the input iterable is sorted, the combination tuples will be produced in sorted order.
