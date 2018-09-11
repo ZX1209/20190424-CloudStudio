@@ -1,20 +1,7 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @ZX1209
- Sign out
-97
-1,894 272 skywind3000/awesome-cheatsheets
- Code  Issues 2  Pull requests 0  Projects 0  Wiki  Insights
-awesome-cheatsheets/languages/bash.sh
-49dbd9b  2 days ago
- skywind3000 update bash cheatsheet
-     
-828 lines (676 sloc)  39.3 KB
+$(UNIX command)           # 运行命令，并将标准输出内容捕获并返回
+
+
+
 ##############################################################################
 # BASH CHEATSHEET (中文速查表)  -  by skywind (created on 2018/02/14)
 # Version: 41, Last Modified: 2018/03/11 00:12
@@ -302,7 +289,7 @@ ${variable//pattern/str}  # 将变量中所有匹配 pattern 的地方替换成 
 
 ${#varname}               # 返回字符串长度
 
-*(patternlist)            # 零次或者多次匹配
+* (patternlist)            # 零次或者多次匹配
 +(patternlist)            # 一次或者多次匹配
 ?(patternlist)            # 零次或者一次匹配
 @(patternlist)            # 单词匹配
@@ -841,16 +828,3 @@ https://github.com/jlevy/the-art-of-command-line
 https://yq.aliyun.com/articles/68541
 
 # vim: set ts=4 sw=4 tw=0 et :
-
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About

@@ -1,4 +1,4 @@
-```
+```css
 /*id selector*/
 #id_name{
   
@@ -12,6 +12,11 @@
 /*all element*/
 * {
   
+}
+
+/*属性选择*/
+input[title:"w3c"]{
+
 }
 
 ```

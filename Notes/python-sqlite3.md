@@ -26,6 +26,7 @@ ID INTEGER PRIMARY KEY NOT NULL
 ## 自增插入
 insert into QUOTES(QUOTE) values(?)
 
+
 # 插入
 INSERT INTO TABLE_NAME [(column1, column2, column3,...columnN)]  
 VALUES (value1, value2, value3,...valueN);
@@ -41,3 +42,11 @@ SELECT column-list
 FROM table_name 
 [WHERE condition] 
 [ORDER BY column1, column2, .. columnN] [ASC | DESC];
+
+
+# 外键 not tested
+create table test(
+    id intergate primer key not null,
+    fkey int,
+    foreign key(fkey) reference table(col),
+);

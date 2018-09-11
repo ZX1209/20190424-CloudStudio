@@ -1,3 +1,6 @@
+a:link
+a:Visit
+a:hover
 
 
 
