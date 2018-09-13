@@ -1,6 +1,9 @@
-python -i
+# command line
+# 交互式载入
+python -i <file>
 
-python -m
+# 使用模块
+python -m <model_name>
 
 # // 整除符号
 
