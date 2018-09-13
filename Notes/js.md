@@ -1,12 +1,20 @@
 js.md
 
+js-dom
+
+js-window
+
+js-$special
+
+js-synatx
+
 window.location.href
 
 # 获取与修改文本框的值(id)
 document.getElementByID('ids').value  = ""
 document.getElementByID('ids').onkeypress  = "command();"
 
-# 
+# d
 function some(){
 	
 }
@@ -17,7 +25,7 @@ var i  = 0
 
 一、使用obj.className来修改样式表的类名
 从下面的代码可以看出ob.style.cssTest是如何来btnB的样式的。
-```js
+```jsb
  function changeStyle1() {
             var obj = document.getElementById("btnB");
             obj.style.backgroundColor= "black";
