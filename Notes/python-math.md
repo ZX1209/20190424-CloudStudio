@@ -6,3 +6,6 @@ math.ceil()
 math.floor()
 
 
+# 乘阶
+math.factorial()
+

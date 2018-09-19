@@ -26,7 +26,14 @@ Python除了def/class/lambda 外，其他如: if/elif/else/ try/except for/while
 
 # chr() & ord()
 
-# all & any
+# all() & any()
+
+# getattr() 通过字符串获取对象..
+
+# exec() & eval()
+compile()
+
+# if elif ... else
 
 #int & format
 int('00100',2)

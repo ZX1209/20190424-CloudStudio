@@ -1,3 +1,23 @@
+# index
+defaultdict , deque
+
+
+# defaultdict 有默认值的字典
+```python
+s = [('yellow', 1), ('blue', 2), ('yellow', 3), ('blue', 4), ('red', 1)]
+d = defaultdict(list)
+for k, v in s:
+    d[k].append(v)
+sorted(d.items())
+[('blue', [2, 4]), ('red', [1]), ('yellow', [1, 3])]
+
+# This technique is simpler and faster than an equivalent technique using dict.setdefault():
+```
+
+
+
+
+# deque 双端队列
 ```python
 from collection import deque
 dtest = deque(maxlen=5)

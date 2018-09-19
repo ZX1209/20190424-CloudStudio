@@ -1,11 +1,114 @@
 ## import path...
 
+# 基本思路
+[subplot]
+plot
+设置
+...
+plt.show()
+(一张图,,可以传多组数据,,多个曲线)
+
+with plt.xkcd():
+
+# 基本
+```python
 import matplotlib.pyplot as plt
 plt.plot([1,2,3,4])
 plt.ylabel('some numbers')
 plt.show()
+```
+# fill
 
-# subplot
+# 色调
+autumn(),bone(),cool(),copper(),flag(),gray(),hot(),hsv(),inferno(),jet(),magna(),nipy_spectral(),pink(),plasma(),prism(),spectral(),spring(),viridis(),summer()
+
+# 轴,标题
+xlabel(),ylabel(),xlim(),ylim(),xticks(),yticks(),xscale(),yscale(),title()
+
+# 交互模式
+ion()
+ioff()
+是否需要show()
+
+# 线图
+plot()
+
+# 图像
+imshow()
+
+# 矩阵图
+pcolormesh()
+
+# 等高图
+contour() 
+
+# 直方图
+hist()
+
+# ploar()
+
+# 散点图
+scatter()
+
+# 开启网格
+plt.grid(True)
+
+# streamplot()
+
+# Axes3D
+
+# 条形图
+bar()
+
+# 饼图
+pie
+
+# table
+
+# Polar plots
+polar()
+
+# 图例
+legends()
+
+arrow()
+axhline()
+axhspan()
+axvline()
+axvspan()
+colorbar()
+
+figimage()
+figtext()
+
+table()
+text()
+subtitle()
+
+
+# matplotlib.path
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+
+x = np.arange(0.0, 50.0, 2.0)
+y = x ** 1.3 + np.random.rand(*x.shape) * 30.0
+s = np.random.rand(*x.shape) * 800 + 500
+
+plt.scatter(x, y, s, c="g", alpha=0.5, marker=r'$\clubsuit$',
+            label="Luck")
+plt.xlabel("Leprechauns")
+plt.ylabel("Gold")
+plt.legend(loc=2)
+plt.show()
+```
+
+# 多图 subplot
 ```python
 # 分成2x2，占用第一个，即第一行第一列的子图
 plt.subplot(221)
@@ -14,6 +117,39 @@ plt.subplot(222)
 # 分成2x1，占用第二个，即第二行
 plt.subplot(212)
 plt.show()
+```
+## 另一种
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(19680801)
+data = np.random.randn(2, 100)
+
+fig, axs = plt.subplots(2, 2, figsize=(5, 5))
+axs[0, 0].hist(data[0])
+axs[1, 0].scatter(data[0], data[1])
+axs[0, 1].plot(data[0], data[1])
+axs[1, 1].hist2d(data[0], data[1])
+
+plt.show()
+```
+
+# fig,axes = plt.subplots()
+## subplot & subplots
+```python
+fig, axes = plt.subplots(2, 2, subplot_kw=dict(polar=True))
+axes[0, 0].plot(x, y)
+axes[1, 1].scatter(x, y)
+
+f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+ax1.plot(x, y)
+ax1.set_title('Sharing Y axis')
+ax2.scatter(x, y)
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_title('Simple plot')
 ```
 
 
@@ -209,3 +345,71 @@ for i in range(len(data)):
     plt.pause(0.1)
 ```
 
+## 参考2
+```python
+import time
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def get_memory(t):
+    "Simulate a function that returns system memory"
+    return 100 * (0.5 + 0.5 * np.sin(0.5 * np.pi * t))
+
+
+def get_cpu(t):
+    "Simulate a function that returns cpu usage"
+    return 100 * (0.5 + 0.5 * np.sin(0.2 * np.pi * (t - 0.25)))
+
+
+def get_net(t):
+    "Simulate a function that returns network bandwidth"
+    return 100 * (0.5 + 0.5 * np.sin(0.7 * np.pi * (t - 0.1)))
+
+
+def get_stats(t):
+    return get_memory(t), get_cpu(t), get_net(t)
+
+fig, ax = plt.subplots()
+ind = np.arange(1, 4)
+
+# show the figure, but do not block
+plt.show(block=False)
+
+
+pm, pc, pn = plt.bar(ind, get_stats(0))
+pm.set_facecolor('r')
+pc.set_facecolor('g')
+pn.set_facecolor('b')
+ax.set_xticks(ind)
+ax.set_xticklabels(['Memory', 'CPU', 'Bandwidth'])
+ax.set_ylim([0, 100])
+ax.set_ylabel('Percent usage')
+ax.set_title('System Monitor')
+
+start = time.time()
+for i in range(200):  # run for a little while
+    m, c, n = get_stats(i / 10.0)
+
+    # update the animated artists
+    pm.set_height(m)
+    pc.set_height(c)
+    pn.set_height(n)
+
+    # ask the canvas to re-draw itself the next time it
+    # has a chance.
+    # For most of the GUI backends this adds an event to the queue
+    # of the GUI frameworks event loop.
+    fig.canvas.draw_idle()
+    try:
+        # make sure that the GUI framework has a chance to run its event loop
+        # and clear any GUI events.  This needs to be in a try/except block
+        # because the default implementation of this method is to raise
+        # NotImplementedError
+        fig.canvas.flush_events()
+    except NotImplementedError:
+        pass
+
+stop = time.time()
+print("{fps:.1f} frames per second".format(fps=200 / (stop - start)))
+```

@@ -3,10 +3,31 @@ js.md
 js-dom
 
 js-window
+window, navigator, screen, history, location
 
 js-$special
 
 js-synatx
+
+# JavaScript 对象
+JS Array
+JS Boolean
+JS Date
+JS Math
+JS Number
+JS String
+JS RegExp
+JS Functions
+JS Events
+
+# js dom 顶层对象
+对象  描述
+Window  JavaScript 层级中的顶层对象。Window 对象表示浏览器窗口。每当 <body> 或者 <frameset> 标签出现，Window 对象就会被自动创建。
+Navigator   包含客户端浏览器的信息。
+Screen  包含客户端显示屏的信息。
+History 包含了浏览器窗口访问过的 URL。
+Location    包含了当前URL的信息。
+
 
 window.location.href
 
