@@ -1,3 +1,7 @@
+# 检查实时对象
+inspect live object
+
+
 .getsourcecode()
 
 

@@ -1,18 +1,18 @@
 ```python
-import headq
+import heapq
 
-headq.heapify()
+heapq.heapify()
 
-headq.heappop()
-headq.heappush()
+heapq.heappop()
+heapq.heappush()
 
-headq.heappushpop()
-headq.heapreplace()
+heapq.heappushpop()
+heapq.heapreplace()
 
-headq.merge()
+heapq.merge()
 
-headq.nlargest()
-headq.nsmallest()
+heapq.nlargest()
+heapq.nsmallest()
 
 ```
 

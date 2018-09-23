@@ -1,3 +1,18 @@
+# 列表生成式
+```python
+for color in colors: 
+    for size in sizes:
+        print((color, size))
+
+tshirts = [(color, size) for size in sizes for color in colors]
+
+# 注意，这里两个循环的嵌套关系和上面列表推导中 for 从句的先后顺序一样
+```
+# pythonpath
+模块路径
+系统变量
+
+
 # command line
 # 交互式载入
 python -i <file>
@@ -23,6 +38,9 @@ B （Built-in） 内建作用域
 
 Python除了def/class/lambda 外，其他如: if/elif/else/ try/except for/while并不能改变其作用域。定义在他们之内的变量，外部还是可以访问。
 ===
+
+# str to list
+list & sorted
 
 # chr() & ord()
 

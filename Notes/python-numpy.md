@@ -7,9 +7,61 @@
 # ndarray attr
 ndim, shape, size, dtype, itemsize, data
 
+# shape
+.shape = -1,2
+# any cols 2 rows
+
+# T
+返回转置矩阵
+
 # ufunc
 all, any, apply_along_axis, argmax, argmin, argsort, average, bincount, ceil, clip, conj, corrcoef, cov, cross, cumprod, cumsum, diff, dot, floor, inner, inv, lexsort, max, maximum, mean, median, min, minimum, nonzero, outer, prod, re, round, sort, std, sum, trace, transpose, var, vdot, vectorize, where
 
+## np.sum()
+轴上元素加,,元素形态一致,,可以加,,+
+合并轴吧..加至1
+```python
+In [36]: test = np.ones((3,4,5))
+
+In [37]: test
+Out[37]:
+array([[[1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.]],
+
+       [[1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.]],
+
+       [[1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.],
+        [1., 1., 1., 1., 1.]]])
+
+In [38]: np.sum(test)
+Out[38]: 60.0
+
+In [39]: np.sum(test,axis = 0)
+Out[39]:
+array([[3., 3., 3., 3., 3.],
+       [3., 3., 3., 3., 3.],
+       [3., 3., 3., 3., 3.],
+       [3., 3., 3., 3., 3.]])
+
+In [40]: a1 = np.sum(test,axis = 0)
+
+In [41]: a2 = np.sum(a1,axis = 0)
+
+In [42]: a2
+Out[42]: array([12., 12., 12., 12., 12.])
+
+In [43]: a3 = np.sum(a2,axis = 0)
+
+In [44]: a3
+Out[44]: 60.0
+```
 
 ```python
 import numpy as np
@@ -17,6 +69,8 @@ import numpy as np
 np.random.seed(324234)
 
 np.random.randn(10)
+
+np.random.random_sample((size))
 ```
 
 # 创建 ndarray

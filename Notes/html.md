@@ -1,5 +1,8 @@
 # head metadata
 
+# frameset 
+`col="25.*"`
+
 # 强行空格
 &nbsp;或全角空格符
 

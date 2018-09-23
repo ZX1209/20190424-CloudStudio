@@ -3,26 +3,64 @@ a:Visit
 a:hover
 
 
-
-
-
-
+# text-decoration下划线CSS单词值参数：
+none : 　无装饰
+blink : 　闪烁
+underline : 　下划线
+line-through : 　贯穿线
+overline : 　上划线
 
 
 # 整齐排列
 float:left
 > 或者是什么grid的,,不怎么用呢...
 
+# display 样式
+inline
+block
+inline-block
+
+# 字体
+font-size:10px;
+font-family
+font-weight
+font-height
 # 字体大小
 font-size
 
-# 阴影  圆角
-border-radius:5px;
+# 文本
+text-align
+text-indent
+text-decoration
+text-spacing
+text-overflow
+letter-spacing
 
+
+# 边框属性
+border-weight:10px;
+border-style:[solid（默认实线），dotted（点线），dashed（虚线）];
+border-color:red;
+border:10px dotted red;...
+## 阴影  圆角
+border-radius:5px;
 box-shadow: 2px 2px 5px #000;
 
 transform: rotate(45deg); & transform-origin: 250px 150px;
 
+# 颜色color的写法
+单词：red，blue，yellow等；
+十六进制：#000，#fff，#060606 等；
+rgb形式：rgb(255,255,255)；
+rgba形式：rgba(0,0,0,0.5) ，里面的a代表的是透明度，范围是`0~1`，数值越大越不透明；
+
+# 隐藏和透明
+透明（指的是元素不能被看见，但是位置依然被占据）
+1.opacity:0~1：透明度，作用于整体，用得比较少；
+2.visibility:hidden：元素可见度，表示该元素透明，位置依然占据；
+3.background-color:rgba(0,0,0,0~1)：表示背景色的透明度，a的值为0时完全透明；
+隐藏（指元素整体消失，并且不占据位置）
+1.display:none：表示设置该元素消失，不占据位置也看不见；
 
 # 线性变换
 style="background-image: linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%)"

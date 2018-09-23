@@ -19,15 +19,15 @@ os.popen()
 
 
 
-os.system()
+# os.system()
+sys shell command
+
+
+# os.getcwd()
 
 
 
-os.getcwd()
-
-
-
-os.chdir()
+# os.chdir()
 
 
 
