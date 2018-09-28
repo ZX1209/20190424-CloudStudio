@@ -43,7 +43,9 @@ function some(){
 # 
 var i  = 0
 
-
+# .style
+m = documnet.getElementByClassName('main')
+m[0].style.
 一、使用obj.className来修改样式表的类名
 从下面的代码可以看出ob.style.cssTest是如何来btnB的样式的。
 ```jsb

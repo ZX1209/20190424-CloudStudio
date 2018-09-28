@@ -31,7 +31,17 @@ insert into QUOTES(QUOTE) values(?)
 INSERT INTO TABLE_NAME [(column1, column2, column3,...columnN)]  
 VALUES (value1, value2, value3,...valueN);
 
+# 修改
+update todos set state='done' where titie='this is a test'
 
+# 删除
+delete from table where ...
+
+# 选择
+select * from todos where ...
+
+# 不重复选择
+select distinct.. from .. ...
 
 # 查看表列信息
 # 比如 表 douban_move
@@ -42,6 +52,8 @@ SELECT column-list
 FROM table_name 
 [WHERE condition] 
 [ORDER BY column1, column2, .. columnN] [ASC | DESC];
+## ASC 升序 从小到大
+## DESC 降序 从大到小
 
 
 # 外键 not tested
@@ -50,3 +62,9 @@ create table test(
     fkey int,
     foreign key(fkey) reference table(col),
 );
+
+# like 字符串匹配
+% 任意个字符
+_ 一个字符
+
+escape '\'

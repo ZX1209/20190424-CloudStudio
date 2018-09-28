@@ -63,8 +63,9 @@ rgba形式：rgba(0,0,0,0.5) ，里面的a代表的是透明度，范围是`0~1`
 1.display:none：表示设置该元素消失，不占据位置也看不见；
 
 # 线性变换
-style="background-image: linear-gradient(45deg,#5a3694 0,#13bdce 33%,#0094d9 66%,#6fc7b5 100%)"
-
+background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 
 ## inline css     (内联)
 

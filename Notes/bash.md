@@ -1,3 +1,8 @@
+# 改变密码
+## passwd username 
+## passwd username -d
+#$ passwd 
+
 PS1+=
 
 #

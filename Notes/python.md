@@ -12,6 +12,7 @@ tshirts = [(color, size) for size in sizes for color in colors]
 模块路径
 系统变量
 
+# <= | not =<
 
 # command line
 # 交互式载入
@@ -19,6 +20,10 @@ python -i <file>
 
 # 使用模块
 python -m <model_name>
+
+# byte code
+bytes(str,encoding='utf-8')
+str.decode('utf-8')
 
 # // 整除符号
 
@@ -75,4 +80,15 @@ p += 1
 
 p = p + 1
 # 改变了p的引用
+```
+
+## sorted
+```python
+student_tuples = [
+    ('john', 'A', 15),
+    ('jane', 'B', 12),
+    ('dave', 'B', 10),
+]
+sorted(student_tuples, key=lambda student: student[2])   # sort by age
+# 升序
 ```

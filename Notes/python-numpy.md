@@ -11,6 +11,11 @@ ndim, shape, size, dtype, itemsize, data
 .shape = -1,2
 # any cols 2 rows
 
+# * & .dot()
+* 各对应元素相乘
+
+.dot() 内积.. 行 乘 列 
+
 # T
 返回转置矩阵
 

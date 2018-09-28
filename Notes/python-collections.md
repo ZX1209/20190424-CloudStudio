@@ -1,5 +1,5 @@
 # index
-defaultdict , deque
+defaultdict , deque, Counter, namedtuple
 
 
 # defaultdict 有默认值的字典
@@ -19,7 +19,7 @@ sorted(d.items())
 
 # deque 双端队列
 ```python
-from collection import deque
+from collections import deque
 dtest = deque(maxlen=5)
 dtest.append(1)
 ```
@@ -33,4 +33,28 @@ dtest.pop()
 
 dtest.appendleft()
 dtest.popleft()
+```
+
+# Counter 计数
+```python
+from collections import Counter
+
+c = Counter([1,1,1,2,2,3])
+
+c.most_common(3)
+```
+
+# namedtuple 简单结构体类工厂
+## factor -> class -> instanse
+```python
+from collections import namedtuple
+>>> City = namedtuple('City', 'name country population coordinates') 
+>>> tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667)) 
+>>> tokyo
+City(name='Tokyo', country='JP', population=36.933, coordinates=(35.689722,
+139.691667))
+>>> tokyo.population 
+36.933
+>>> tokyo.coordinates
+(35.689722, 139.691667)
 ```
