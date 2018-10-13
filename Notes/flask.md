@@ -26,3 +26,36 @@ flask run --host=0.0.0.0
 app.run(debug=True,host='0.0.0.0',port='10001')
 
 
+# 路由及变量
+```python
+# Converter types:
+
+# string  (default) accepts any text without a slash
+# int accepts positive integers
+# float   accepts positive floating point values
+# path    like string but also accepts slashes
+# uuid    accepts UUID strings
+@app.route('/user/<name>/<int:id>')
+def some_func():
+    pass
+
+```
+
+# 上下文
+> current_app,g,request,session
+
+# 请求钩子
+before_first_request,before_request,after_request,teardown_request
+
+# 响应
+```python
+@app.route('/')
+def func():
+    return "something",404 #[headers]?
+```
+
+# session
+session['name'] = name
+session.get('name')
+
+# flask-moment

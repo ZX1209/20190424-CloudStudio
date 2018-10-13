@@ -3,6 +3,9 @@
 矩阵运算
 
 
+# np.cumsum
+累计求和
+numpy.cumsum(a, axis=None, dtype=None, out=None)
 
 # ndarray attr
 ndim, shape, size, dtype, itemsize, data

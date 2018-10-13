@@ -8,3 +8,13 @@ $(selector).on('click',functioin(){...})
 
 基本上jquery的每个函数都有回调函数
 
+
+# ajax
+```js
+$.ajax({
+  url: url,
+  data: data,
+  success: success,
+  dataType: dataType
+});
+```

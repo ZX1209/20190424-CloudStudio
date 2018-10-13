@@ -8,5 +8,10 @@ jinja.md
 # 打印变量
 {{}}
 
+# 过滤
+{{ name|capitalize }}
+safe,capitalize,lower,upper,title,trim,striptags
+
 # 注释
 {##}
+

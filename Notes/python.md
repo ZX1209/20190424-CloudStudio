@@ -12,6 +12,10 @@ tshirts = [(color, size) for size in sizes for color in colors]
 模块路径
 系统变量
 
+# decoding problem
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 # <= | not =<
 
 # command line

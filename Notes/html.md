@@ -3,6 +3,44 @@
 # frameset 
 `col="25.*"`
 
+# 单选 多选 下拉框 
+# name 算是,索引字段..
+```html
+<form action="target.file" method="post" onsubmit="return checkForm(this);">
+    
+    <!-- 单选 -->
+    <input type="radio" name="sex"value="male"> something behand..seems no limit
+    <input type="radio" name="sex" value="female"> something behand..seems no limit
+
+    <!-- 下拉框 -->
+    <select name="carer">
+        <option value="学生">学生</option>
+        <option value="教师">教师</option>
+        <option value="other">other</option>
+    </select>
+
+    <!-- 多选 -->
+    <input type="checkbox" name="hobies" value="电脑网站">电脑网站 &nbsp
+    <input type="checkbox" name="hobies" value="影音娱乐">影音娱乐 &nbsp
+    <input type="checkbox" name="hobies" value="棋牌娱乐">棋牌娱乐 &nbsp
+    <input type="checkbox" name="hobies" value="读书读报">读书读报 &nbsp
+    <input type="checkbox" name="hobies" value="美酒佳肴">美酒佳肴 &nbsp
+    <input type="checkbox" name="hobies" value="绘画书法">绘画书法 &nbsp
+
+    <!-- 多行文本 -->
+    <textarea rows="4" cols="20" name="self_introduce">
+    输入你的个人说明
+    </textarea>
+
+    <td>
+        <input type="submit" value="提交">
+    </td>
+    <td>
+        <input type="reset" value="清楚">
+    </td>
+</form>
+```
+
 # 强行空格
 &nbsp;或全角空格符
 
