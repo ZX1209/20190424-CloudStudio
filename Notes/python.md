@@ -1,3 +1,9 @@
+# sort
+sorted(s,key=lambda x:100 * x[1]-x[0])
+This idiom works because tuples are compared lexicographically; the first items are compared; if they are the same then the second items are compared, and so on.
+
+# [4:8] 可以超越长度 (应该做了处理呢.)
+
 # 列表生成式
 ```python
 for color in colors: 

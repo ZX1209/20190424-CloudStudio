@@ -1,3 +1,4 @@
+```bash
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -109,3 +110,4 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+```

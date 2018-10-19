@@ -17,7 +17,7 @@ out = bmpFile.point(lambda i:i//2)
 out.show()
 
 # 颜色模式转换
-#“L”, “RGB” and “CMYK.”
+#"1",“L”, “RGB” and “CMYK.”
 out = bmpFile.convert("L")
 out.show()
 

@@ -1,5 +1,34 @@
 import random
+from math import sqrt
 
+def Factorization(n):
+    res = []
+    for i in range(1,int(sqrt(n))+1):
+        if n%i == 0:
+            res.append(i)
+            res.append(n//i)
+    return res
+
+
+def decToN(i,base):
+    if i==0:
+        return "0"
+    ans = []
+    flag = 0
+
+    if i<0:
+        flag = 1
+        i = abs(i)
+
+    while i>0:
+        ans.append(str(i%base))
+        i//=7
+
+    if flag:
+        ans.append('-')
+    ans.reverse()
+
+    return "".join(ans)
 
 def is_primer(n):
     if n == 2 or n == 3:

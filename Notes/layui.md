@@ -48,6 +48,10 @@ layui-bg-gray   用于设置元素经典灰色背景
 
 
 # 栅格系统
+layui-row
+    layui-col-md* [layui-col-md-offset* |  layui-col-space5]
+        div
+
 一、栅格布局规则：
 
 1.  采用 layui-row 来定义行，如：<div class="layui-row"></div>
@@ -128,46 +132,11 @@ codelayui.code
 
 
 # 颜色
-常用主色
-#009688
-
-通常用于按钮、及任何修饰元素
-
- 
-#5FB878
-
-一般用于选中状态
-
- 
-#393D49
-
-通常用于导航
-
- 
-#1E9FFF
-
-比较适合一些鲜艳色系的页面
-
+常用主色 #009688 通常用于按钮、及任何修饰元素 #5FB878 一般用于选中状态 #393D49 通常用于导航 #1E9FFF 比较适合一些鲜艳色系的页面
 layui 主要是以象征包容的墨绿作为主色调，由于它给人以深沉感，所以通常会以浅黑色的作为其陪衬，又会以蓝色这种比较鲜艳的色调来弥补它的色觉疲劳，整体让人清新自然，愈发耐看。【取色意义】：我们执着于务实，不盲目攀比，又始终不忘绽放活力。这正是 layui 所追求的价值。
 
 场景色
-#FFB800
-
-暖色系，一般用于提示性元素
-
- 
-#FF5722
-
-比较引人注意的颜色
-
- 
-#01AAED
-
-用于文字着色，如链接文本
-
- 
-#2F4056
-
+#FFB800 暖色系，一般用于提示性元素 #FF5722 比较引人注意的颜色 #01AAED 用于文字着色，如链接文本 #2F4056
 侧边或底部普遍采用的颜色
 
 事实上，layui 并非不敢去尝试一些亮丽的颜色，但许多情况下一个它可能并不是那么合适，所以我们把这些颜色归为“场景色”，即按照实际场景来呈现对应的颜色，比如你想给人以警觉感，可以尝试用上面的红色。他们一般会出现在 layui 的按钮、提示和修饰性元素，以及一些侧边元素上。
@@ -175,26 +144,7 @@ layui 主要是以象征包容的墨绿作为主色调，由于它给人以深�
 极简中性色
 他们一般用于背景、边框等
 
-#F0F0F0
-
- 
-#f2f2f2
-
- 
-#eeeeee
-
- 
-#e2e2e2
-
- 
-#dddddd
-
- 
-#d2d2d2
-
- 
-#c2c2c2
-
+#F0F0F0 #f2f2f2 #eeeeee #e2e2e2 #dddddd #d2d2d2 #c2c2c2
 layui 认为灰色系代表极简，因为这是一种神奇的颜色，几乎可以与任何元素搭配，不易形成视觉疲劳，且永远不会过时。低调而优雅！
 
 内置的背景色CSS类
@@ -212,6 +162,8 @@ layui 内置了七种背景色，以便你用于各种元素中，如：徽章�
 
 
 # 图标
+i.layui-icon layui-icon-face-smile{[&#xe60c;]}
+
 通过对一个内联元素（一般推荐用 i标签）设定 class="layui-icon"，来定义一个图标，然后对元素加上图标对应的 font-class（注意：layui 2.3.0 之前只支持采用 unicode 字符)，即可显示出你想要的图标，譬如：
 
 codelayui.code
@@ -229,6 +181,8 @@ codelayui.code
 
 
 # 动画
+div.lauui-anim layui-anim-*
+
 动画的使用非常简单，直接对元素赋值动画特定的 class 类名即可。如：
 
 codelayui.code
@@ -265,6 +219,13 @@ layui-anim-rotate
 
 
 # 按钮
+.layui-btn layui-btn-lg layui-btn-radius layui-btn-normal
+
+.layui-container
+
+.layui-btn-group
+
+
 用法
 codelayui.code
 <button class="layui-btn">一个标准的按钮</button>
@@ -359,6 +320,8 @@ layui-tab
 
 
 # 进度条
+div.layui-progress.layu-progress-big[lay-showPercent="true"]>div.layui-progress-bar[lay-percent="10%"]
+
 <div class="layui-progress layui-progress-big " lay-showPercent="true">
   <div class="layui-progress-bar" lay-percent="10%"></div>
 </div>
@@ -376,6 +339,7 @@ layui-table
             ...
         ...
 
+table.layui-table>(colgroup>(col[width="100px"]{定义表格大小等})*3+(thead>tr>th*3)+(tbody>(tr>td*3)*3)
 
 属性名 属性值 备注
 lay-even    无   用于开启 隔行 背景，可与其它属性一起使用
@@ -406,11 +370,24 @@ layui-badge-rim  边框体
 # 时间线
 ul.layui-timeline
     li.layui-timeline-item
-        li.ayui-icon layui-timeline-axis
+        li.layui-icon layui-timeline-axis
         div.layui-timeline-content layui-text
         .layui-timeline-title
-      
+        p.main
+```emment
+ul.layui-timeline>((lilayui-timeline-item>(li.layui-icon.layui-timeline-axis{&#xe63f;}+div.layui-timeline-content.layui-text>(h3.layui-timeline-title+p{内容}))))*2
+```
 
+form.layui-form>(div.layui-form-item>(label.layui-form-label{输入框}+div.layui-input-block>input))
+
+<form class="layui-form" action="">
+  <div class="layui-form-item">
+    <label class="layui-form-label">输入框</label>
+    <div class="layui-input-block">
+      <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+</form>
 
 在一个容器中设定 class="layui-form" 来标识一个表单元素块，通过规范好的HTML结构及CSS类，来组装成各式各样的表单元素，并通过内置的 form模块 来完成各种交互。
 依赖加载模块：form （请注意：如果不加载form模块，select、checkbox、radio等将无法显示，并且无法使用form相关功能）

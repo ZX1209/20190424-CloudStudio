@@ -15,6 +15,9 @@ r.span.attrs['style'] = "..."
 # node.node.node
 quote.span.attrs
 tag.tag.attrs
+上面的只能找到第一个
+
+find_all 是找到所有的
 
 # 另一种,还行.. 
 r2 = soup.find_all('div',id="search")

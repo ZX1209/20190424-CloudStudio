@@ -43,6 +43,10 @@ function some(){
 # 
 var i  = 0
 
+
+domElement.sytle.background
+# 标签 style 中 标明的.
+
 # .style
 m = documnet.getElementByClassName('main')
 m[0].style.

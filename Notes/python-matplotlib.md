@@ -30,6 +30,14 @@ ion()
 ioff()
 是否需要show()
 
+# 箱线图
+```py
+from matplotlib import pyplot as plt
+a=range(1,10)
+plt.boxplot((a,a),labels=('Mon','Tue'))
+plt.show()
+```
+
 # 线图
 plot()
 

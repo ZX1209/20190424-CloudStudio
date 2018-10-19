@@ -2,6 +2,8 @@
 操作(加减乘除,)
 矩阵运算
 
+# numpy.array() & ndarray.tolist()
+
 
 # np.cumsum
 累计求和

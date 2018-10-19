@@ -1,3 +1,5 @@
+# 一个 socket.socket 对象 来进行连接,发送  绑定,监听..
+
 ```python
 #server.py
 
