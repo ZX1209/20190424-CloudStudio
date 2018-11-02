@@ -1,3 +1,12 @@
+git init
+git add & git reset
+git branch & git checkout
+git merge
+
+
+
+
+
 # To set your identity:
 git config --global user.name "GL"
 git config --global user.email 1404919041@qq.com

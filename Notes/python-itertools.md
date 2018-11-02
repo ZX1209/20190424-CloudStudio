@@ -43,3 +43,8 @@ def combinations(iterable, r):
         for j in range(i+1, r):
             indices[j] = indices[j-1] + 1
         yield tuple(pool[i] for i in indices)
+
+
+# permutations(iterable, r=None) 排列组合
+    # permutations('ABCD', 2) --> AB AC AD BA BC BD CA CB CD DA DB DC
+    # permutations(range(3)) --> 012 021 102 120 201 210

@@ -1,6 +1,11 @@
 import random
-from math import sqrt
+from math import sqrt,factorial
 
+# 排列组合 C_n^m
+def C(n,m):
+    return math.factorial(n)//(math.factorial(n-m)*math.factorial(m))
+
+# 因数分解
 def Factorization(n):
     res = []
     for i in range(1,int(sqrt(n))+1):

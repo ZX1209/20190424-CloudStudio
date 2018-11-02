@@ -36,3 +36,27 @@ for i,col in enumerate(color):
     plt.xlim([0,256])
 plt.show()
 ```
+
+
+# 多个窗口 多个图像
+```python
+cv2.namedWindow('image1',cv2.WINDOW_NORMAL)
+cv2.imshow('image1',img3)
+cv2.namedWindow('image2',cv2.WINDOW_NORMAL)
+cv2.imshow('image2',cImg3.astype('uint8'))
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+
+```python
+def cv2ShowImages(imgs):
+    for i,img in enumerate(imgs):
+        cv2.namedWindow(str(i),cv2.WINDOW_NORMAL)
+        cv2.imshow(str(i),img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+```
+
+
+uint8

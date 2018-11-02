@@ -1,3 +1,9 @@
+# nu.lookfor('create')
+
+# ndarray[::2,[2,3,1],,]
+
+# ndarray.reshape() & ndarray.ravel()
+
 创建,
 操作(加减乘除,)
 矩阵运算
