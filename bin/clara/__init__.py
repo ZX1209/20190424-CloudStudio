@@ -1,6 +1,43 @@
 import random
 from math import sqrt,factorial
 
+def indexAll(l,v):
+    tmp = []
+    i = 0
+    while i<len(l):
+        try:
+            i = l.index(v,i)
+            tmp.append(i)
+        except ValueError:
+            return tmp
+
+        i+=1
+    return tmp
+
+def splitList(l,v):
+    tmp = []
+    tmpindex = indexAll(l,v)
+    tmpindex = tmpindex
+
+    tmp.append(l[:tmpindex[0]])
+
+    i = 0
+    while i<len(tmpindex)-1:
+        tmp.append(l[tmpindex[i]+1:tmpindex[i+1]])
+        i+=1
+
+    tmp.append(l[tmpindex[-1]+1:])
+    return tmp
+    
+
+
+def splitNum(n):
+    ans = []
+    while n>0:
+        ans.append(n%10)
+        n//=10
+    return ans
+
 # 排列组合 C_n^m
 def C(n,m):
     return math.factorial(n)//(math.factorial(n-m)*math.factorial(m))

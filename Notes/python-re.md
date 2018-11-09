@@ -38,6 +38,7 @@ start & end
 
 # re.sub re.subn
 re.sub(pattern, repl, string, count=0, flags=0)
+> replace
 
 Return the string obtained by replacing the leftmost
 non-overlapping occurrences of the pattern in string by the

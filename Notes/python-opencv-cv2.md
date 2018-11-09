@@ -18,6 +18,9 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
+# cv2.filter2D
+
+
 # cv2.cvtColor
 颜色转换
 cv2.COLOR_RGB2GRAY

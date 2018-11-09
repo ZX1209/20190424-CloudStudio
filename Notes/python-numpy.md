@@ -1,3 +1,6 @@
+# np.hstack
+将多个矩阵水平方向排列组合成一个
+
 # nu.lookfor('create')
 
 # ndarray[::2,[2,3,1],,]
