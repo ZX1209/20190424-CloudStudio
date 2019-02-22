@@ -1,3 +1,5 @@
+# zip & itertools.zip_longest(* iterables, fillvalue=None)
+
 # `itertools.product(*iterables, repeat=1)`
 ## 二维遍历
 > product('ABCD', 'xy') --> Ax Ay Bx By Cx Cy Dx Dy

@@ -1,5 +1,130 @@
 import random
 from math import sqrt,factorial
+from bisect import bisect_left
+
+class MarkDownHelper():
+    def GenOutLine(self,orders,produce=[]):
+        if orders:
+            for i in range(1,orders[0]+1):
+                print(self.GenHeadingLabel(produce+[i]))
+                if len(orders)>1:deepList(orders[1:],produce+[i])
+
+    def GenHeadingLabel(slef,levels:list):
+        if not levels:
+            return ""
+
+        label = "#"*len(levels)
+        title = str(levels[0])
+        for level in levels[1:]:
+            title+='.'+str(level)
+
+        return label+' '+title
+
+def produceLevelLabel(levels:list,prefix="#"):
+    if not levels:
+        return ""
+
+    label = "#"*len(levels)
+    title = str(levels[0])
+    for level in levels[1:]:
+        title+='.'+str(level)
+
+    return label+' '+title
+
+
+def deepList(orders,produce=[]):
+    if orders:
+        for i in range(1,orders[0]+1):
+            print(produceLevelLabel(produce+[i]))
+            if len(orders)>1:deepList(orders[1:],produce+[i])
+
+
+def low_around(nums:list,target:int):
+    nums.sort()
+    for i,num in enumerate(nums):
+        if num>=target:
+            break
+    return nums[i-1],num
+
+
+def low_around_index(nums:list,target:int):
+    tmpnums = sorted(nums)
+    for i,num in enumerate(tmpnums):
+        if num>=target:
+            break
+    return nums.index(tmpnums[i-1]),nums.index(num)
+
+def high_around_index(nums:list,target:int):
+    tmpnums = sorted(nums,reverse=True)
+    for i,num in enumerate(tmpnums):
+        if num<=target:
+            break
+    return nums.index(num),nums.index(tmpnums[i-1])
+
+
+
+def findSameElement(l1,l2):
+    """找到两个数值列表中共同出现的数,可重复
+    """
+    ll = len(l1)
+    rl = len(l2)
+    li =0
+    ri = 0
+    tmpSameY = []
+    while li<ll and ri<rl:
+        if l1[li]<l2[ri]:
+            li += 1
+        elif l1[li]>l2[ri]:
+            ri+=1
+        else:
+            tmpSameY.append(l1[li])
+            li+=1
+            ri+=1
+    return tmpSameY
+
+# 2.83 µs ± 1.03 µs per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+def lower_bound(l,v):
+    """bisect_left
+    """
+    return bisect_left(l,v)
+
+# 867 ns ± 97.2 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+def binary_lower_bound(ol,v):
+    """bisect_left
+    """
+    l = 0
+    r = len(ol)-1
+    while l<r:
+        mid = (l+r)//2
+        if v > ol[mid] :
+            l = mid
+        elif v <= ol[mid]:
+            r = mid-1
+    return l
+
+def binarySearch(ol,v):
+    """bisect_left
+    """
+    l = 0
+    r = len(ol)-1
+    while l<r:
+        mid = (l+r)//2
+        if v > ol[mid] :
+            l = mid+1
+        elif v < ol[mid]:
+            r = mid-1
+        else:
+            return mid
+    return -1
+
+char = str
+
+def charMove(c:char,i:int) -> char:
+    return chr(ord(c)+i)
+
+def charMinus(c1:char,c2:char) -> int:
+    return ord(c1)-ord(c2)
+
 
 def indexAll(l,v):
     tmp = []

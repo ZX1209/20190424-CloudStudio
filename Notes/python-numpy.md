@@ -1,3 +1,15 @@
+np 会因为类型溢出
+```python
+o = np.random.randint(0,255,(5,5,3),dtype='uint8')
+co = o+30 # 可能溢出呢..
+```
+
+# np.fill
+
+
+# np.clip
+d = np.clip(s,minv,maxv)
+
 # np.hstack
 将多个矩阵水平方向排列组合成一个
 
@@ -28,7 +40,7 @@ ndim, shape, size, dtype, itemsize, data
 # * & .dot()
 * 各对应元素相乘
 
-.dot() 内积.. 行 乘 列 
+.dot() 内积.. 行 乘 列
 
 # T
 返回转置矩阵
@@ -106,10 +118,10 @@ np.empty((3,4))
 np.arange( 10, 30, 5 )
 
 # 9 numbers from 0 to 2
-np.linspace( 0, 2, 9 )  
+np.linspace( 0, 2, 9 )
 
 # 要禁用此行为并强制NumPy打印整个数组，你可以使用 set_printoptions 更改打印选项
-np.set_printoptions(threshold=np.nan)               
+np.set_printoptions(threshold=np.nan)
 
 ```
 

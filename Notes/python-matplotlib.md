@@ -17,6 +17,18 @@ plt.plot([1,2,3,4])
 plt.ylabel('some numbers')
 plt.show()
 ```
+
+# 图片数据
+```py
+fig=plt.figure()
+plt.plot(x,y)
+canvas=fig.canvas
+
+buffer = io.BytesIO()
+canvas.print_png(buffer)
+data=buffer.getvalue()
+buffer.close()
+```
 # fill
 
 # 色调
@@ -48,7 +60,7 @@ imshow()
 pcolormesh()
 
 # 等高图
-contour() 
+contour()
 
 # 直方图
 hist()
@@ -309,7 +321,7 @@ fig = plt.figure()
 ax = Axes3D(fig)
 
 X = np.arange(-4,4,0.25)
-Y = np.arange(-4,4,0.25)
+Y = np.arange(-4,4  ,0.25)
 X,Y = np.meshgrid(X,Y)
 
 R = np.sqrt(X**2+Y**2)
@@ -447,11 +459,84 @@ def animate(i):
     patch.center = (x, y)
     return patch,
 
-anim = animation.FuncAnimation(fig, animate, 
-                               init_func=init, 
-                               frames=360, 
+anim = animation.FuncAnimation(fig, animate,
+                               init_func=init,
+                               frames=360,
                                interval=20,
                                blit=True)
 
 plt.show()
+```
+
+
+# 3d plot
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+ax.plot(x,y,z) # each as (x,y,z) 对应的坐标点
+
+
+
+```python
+# This import registers the 3D projection, but is otherwise unused.
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+
+def randrange(n, vmin, vmax):
+    '''
+    Helper function to make an array of random numbers having shape (n, )
+    with each number distributed Uniform(vmin, vmax).
+    '''
+    return (vmax - vmin)*np.random.rand(n) + vmin
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+n = 100
+
+# For each set of style and range settings, plot n random points in the box
+# defined by x in [23, 32], y in [0, 100], z in [zlow, zhigh].
+for c, m, zlow, zhigh in [('r', 'o', -50, -25), ('b', '^', -30, -5)]:
+    xs = randrange(n, 23, 32)
+    ys = randrange(n, 0, 100)
+    zs = randrange(n, zlow, zhigh)
+    ax.scatter(xs, ys, zs, c=c, marker=m)
+
+ax.set_xlabel('X Label')
+ax.set_ylabel('Y Label')
+ax.set_zlabel('Z Label')
+```
+
+
+```python
+# This import registers the 3D projection, but is otherwise unused.
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+plt.rcParams['legend.fontsize'] = 10
+
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+
+# Prepare arrays x, y, z
+t = np.linspace(0,100,1000)
+
+x = np.cos(t)
+y = 2*np.sin(t)
+
+z = np.linspace(0,100,1000)
+
+ax.plot(x, y, z, label='parametric curve')
+ax.legend()
 ```

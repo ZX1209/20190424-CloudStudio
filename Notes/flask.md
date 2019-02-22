@@ -13,7 +13,7 @@ deactivate
 export FLASK_APP=explore.py
 flask run --host=0.0.0.0
 
-#dev mode (auto restart and load changed file)
+# dev mode (auto restart and load changed file)
 export FALSK_ENV=development
 export FLASK_DEBUG=1
 

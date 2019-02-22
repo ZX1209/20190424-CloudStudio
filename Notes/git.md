@@ -3,6 +3,23 @@ git add & git reset
 git branch & git checkout
 git merge
 
+git show-branch
+
+# 修改上一次commit信息
+git commit --amend
+
+# 取消上一次 commit (不会删除文件,只是版本树变化)
+git reset HEAD^
+
+# 创建并切换到分支
+git checkout -b branchName
+
+# 删除分支
+git branch -d branchName
+# 合并分支
+$ git checkout master
+$ git merge hotfix
+
 
 
 

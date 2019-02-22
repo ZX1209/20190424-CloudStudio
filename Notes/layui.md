@@ -1,6 +1,6 @@
 # start (flask)
 # 关于个模块的激活
-model.init() 
+model.init()
 试试??
 
 ```html
@@ -12,7 +12,7 @@ model.init()
 function hello(){
       var layer = layui.layer;
       var form = layui.form;
-      
+
       layer.msg('Hello World');
 }
 ```
@@ -85,8 +85,8 @@ xs 最好把..效果上
 
 四、布局容器：
 
-将栅格放入一个带有 class="layui-container" 的特定的容器中，以便在小屏幕以上的设备中固定宽度，让列可控。     
-      
+将栅格放入一个带有 class="layui-container" 的特定的容器中，以便在小屏幕以上的设备中固定宽度，让列可控。
+
 当然，你还可以不固定容器宽度。将栅格或其它元素放入一个带有 class="layui-fluid" 的容器中，那么宽度将不会固定，而是 100% 适应
 
 五、列间距：
@@ -108,7 +108,7 @@ layui-col-space30   列之间间隔 30px
 
 六、列偏移：
 
-对列追加 类似 layui-col-md-offset* 的预设类，从而让列向右偏移。其中 * 号代表的是偏移占据的列数，可选中为 1 - 12。 
+对列追加 类似 layui-col-md-offset* 的预设类，从而让列向右偏移。其中 * 号代表的是偏移占据的列数，可选中为 1 - 12。
 如：layui-col-md-offset3，即代表在“中型桌面屏幕”下，让该列向右偏移3个列宽度
 
 下面是一个采用“列偏移”机制让两个列左右对齐的实例
@@ -127,7 +127,7 @@ codelayui.code
   <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
   <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-      
+
 将上述代码放入你页面 <body> 标签内的任意位置
 
 
@@ -168,16 +168,16 @@ i.layui-icon layui-icon-face-smile{[&#xe60c;]}
 
 codelayui.code
 从 layui 2.3.0 开始，支持 font-class 的形式定义图标：
-<i class="layui-icon layui-icon-face-smile"></i>   
-      
+<i class="layui-icon layui-icon-face-smile"></i>
+
 codelayui.code
 注意：在 layui 2.3.0 之前的版本，只能设置 unicode 来定义图标
-<i class="layui-icon">&#xe60c;</i>   
+<i class="layui-icon">&#xe60c;</i>
 其中的 &#xe60c; 即是图标对应的 unicode 字符
-       
- 
-你可以去定义它的颜色或者大小，如：  
-<i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>  
+
+
+你可以去定义它的颜色或者大小，如：
+<i class="layui-icon layui-icon-face-smile" style="font-size: 30px; color: #1E9FFF;"></i>
 
 
 # 动画
@@ -188,31 +188,31 @@ div.lauui-anim layui-anim-*
 codelayui.code
 其中 layui-anim 是必须的，后面跟着的即是不同的动画类
 <div class="layui-anim layui-anim-up"></div>
- 
+
 循环动画，追加：layui-anim-loop
 <div class="layui-anim layui-anim-up layui-anim-loop"></div>
 
 从最底部往上滑入
 layui-anim-up
- 
+
 微微往上滑入
 layui-anim-upbit
- 
+
 平滑放大
 layui-anim-scale
- 
+
 弹簧式放大
 layui-anim-scaleSpring
 
 渐现
 layui-anim-fadein
- 
+
 渐隐
 layui-anim-fadeout
- 
+
 360度旋转
 layui-anim-rotate
- 
+
 循环动画
 追加：layui-anim-loop
 
@@ -276,9 +276,9 @@ codelayui.code
 按钮容器
 尽管按钮在同节点并排时会自动拉开间距，但在按钮太多的情况，效果并不是很美好。因为你需要用到按钮容器
 <div class="layui-btn-container">
-  <button class="layui-btn">按钮一</button> 
-  <button class="layui-btn">按钮二</button> 
-  <button class="layui-btn">按钮三</button> 
+  <button class="layui-btn">按钮一</button>
+  <button class="layui-btn">按钮二</button>
+  <button class="layui-btn">按钮三</button>
 </div>
 
 # tab 页面
@@ -343,20 +343,20 @@ table.layui-table>(colgroup>(col[width="100px"]{定义表格大小等})*3+(thead
 
 属性名 属性值 备注
 lay-even    无   用于开启 隔行 背景，可与其它属性一起使用
-lay-skin="属性值"  line （行边框风格） 
-row （列边框风格） 
+lay-skin="属性值"  line （行边框风格）
+row （列边框风格）
 nob （无边框风格） 若使用默认风格不设置该属性即可
-lay-size="属性值"  sm （小尺寸） 
+lay-size="属性值"  sm （小尺寸）
 lg （大尺寸）    若使用默认尺寸不设置该属
 
 <table class="layui-table" lay-skin="line">
   行边框表格（内部结构参见右侧目录“常规用法”）
 </table>
- 
+
 <table class="layui-table" lay-skin="row">
   列边框表格（内部结构参见右侧目录“常规用法”）
 </table>
- 
+
 <table class="layui-table" lay-even lay-skin="nob">
   无边框表格（内部结构参见右侧目录“常规用法”）
 </table>

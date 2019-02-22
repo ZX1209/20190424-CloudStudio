@@ -1,3 +1,28 @@
+# 测试端口联通性
+```py
+import socket
+
+
+successPorts = []
+for port in range(26737,50000):
+    try:
+        client = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+        client.settimeout(1)
+        client.connect(('138.128.203.197',port))
+        print("server port:{0} connect OK! ".format(port))
+        successPorts.append(port)
+    except Exception as e:
+        print("server port:{0} can't connect ! error:{1}".format(port,e))
+
+    print("below are success ports")
+    for port in successPorts:
+        print(port)
+
+    client.close()
+
+```
+
 # 一个 socket.socket 对象 来进行连接,发送  绑定,监听..
 
 ```python
@@ -116,7 +141,7 @@ s.setblocking(flag)
 # 创建一个socket
 s = socket()
 # 绑定地址和端口，参数元组
-s.bind() 
+s.bind()
 # 监听
 s.listen()
 while True:

@@ -1,3 +1,10 @@
+在生成器表达式中, in 子句在声明时执行, 而条件子句则是在运行时执行
+
+https://github.com/leisurelicht/wtfpython-cn
+
+# exec 
+动态执行python语法
+
 # sort
 sorted(s,key=lambda x:100 * x[1]-x[0])
 This idiom works because tuples are compared lexicographically; the first items are compared; if they are the same then the second items are compared, and so on.

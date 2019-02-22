@@ -1,3 +1,6 @@
+# 获取自动id
+print conn.insert_id()
+
 ```python
 import sqlite3
 
@@ -28,7 +31,7 @@ insert into QUOTES(QUOTE) values(?)
 
 
 # 插入
-INSERT INTO TABLE_NAME [(column1, column2, column3,...columnN)]  
+INSERT INTO TABLE_NAME [(column1, column2, column3,...columnN)]
 VALUES (value1, value2, value3,...valueN);
 
 # 修改
@@ -48,9 +51,9 @@ select distinct.. from .. ...
 PRAGMA table_info(douban_move)
 
 # 排序语法
-SELECT column-list 
-FROM table_name 
-[WHERE condition] 
+SELECT column-list
+FROM table_name
+[WHERE condition]
 [ORDER BY column1, column2, .. columnN] [ASC | DESC];
 ## ASC 升序 从小到大
 ## DESC 降序 从大到小
