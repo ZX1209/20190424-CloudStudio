@@ -138,6 +138,7 @@ export CHEAT_EDITOR=vim
 #cheat path (win sub for linux proble)
 export PATH=~/.local/bin:$PATH
 
+
 # add python script file to syspath
 export PATH=~/CloudStudio/bin/GLpackage:~/CloudStudio/bin:$PATH
 
@@ -196,9 +197,30 @@ PS1+="\[${cyan}\]\u \[${reset}\]"
 PS1+="@ "
 PS1+="\[${green}\]\h \[${reset}\]"
 PS1+="in "
-PS1+="\[${blue}\]\w \[${reset}\]"
 PS1+="\[${white}\][\A Week:\d]\[${reset}\]"
 PS1+="\n"
-PS1+="\[${orange}\]\$\[${reset}\] "
+PS1+="\[${blue}\]\w \[${reset}\]"
+PS1+="\n"
+PS1+="\[${orange}\]\$\[${reset}\]"
 
 export PS1
+
+
+
+
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/gl/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/gl/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/gl/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/gl/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
