@@ -1,8 +1,11 @@
+# 函数内改变全局变量
+加上 global 修饰
+
 在生成器表达式中, in 子句在声明时执行, 而条件子句则是在运行时执行
 
 https://github.com/leisurelicht/wtfpython-cn
 
-# exec 
+# exec
 动态执行python语法
 
 # sort
@@ -13,7 +16,7 @@ This idiom works because tuples are compared lexicographically; the first items 
 
 # 列表生成式
 ```python
-for color in colors: 
+for color in colors:
     for size in sizes:
         print((color, size))
 
@@ -49,7 +52,7 @@ str.decode('utf-8')
 n = 137
 bin(n)[-1:1:-1]
 ===
-变量作用域（scope）在Python中是一个容易掉坑的地方。 
+变量作用域（scope）在Python中是一个容易掉坑的地方。
 Python的作用域一共有4中，分别是：
 
 L （Local） 局部作用域
