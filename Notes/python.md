@@ -30,6 +30,9 @@ tshirts = [(color, size) for size in sizes for color in colors]
 # pythonpath
 模块路径
 系统变量
+# 设置python 导入模块的用户目录
+
+export  PYTHONPATH=~/CloudStudio/bin
 
 # decoding problem
 #!/usr/bin/env python

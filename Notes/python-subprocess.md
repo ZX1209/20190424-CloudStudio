@@ -1,3 +1,5 @@
+# shlex.split(cmd_str)
+
 subprocess.run("ls -l".split(),capture_output=True)
 
 # subprocess.run

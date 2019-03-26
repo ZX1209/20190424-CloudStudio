@@ -229,3 +229,7 @@ unset __conda_setup
 # cuda init
 export  PATH=/usr/local/cuda-9.0/bin:$PATH
 export  LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64$LD_LIBRARY_PATH
+
+
+PYTHONPATH=~/CloudStudio/bin/
+export PYTHONPATH

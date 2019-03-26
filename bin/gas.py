@@ -7,11 +7,15 @@ from pathlib import Path
 import os
 
 
-if ThirdShell.isNoInternetConnected():
+if ThirdShell.NoInternetConnected():
     pass
 else:
     home = Path.home()
     os.chdir(home/'CloudStudio')
 
-    ThirdShell.RUN(
-        ['git add --all', 'git commit -m "auto commit     by git-auto-save.sh" ', ' git pull ', ' git push'])
+    ThirdShell.runCmdStrs(
+        ['git add --all',
+         'git commit -m "auto commit     by git-auto-save.py" ',
+         ' git pull ',
+         ' git push']
+    )
