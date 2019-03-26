@@ -1,3 +1,45 @@
+# 命令行使用
+dot -Tpdf filename.dot -o filename.pdf
+
+# 基本
+```dot
+graph G{} //无向图
+digraph G{} // 有向图
+
+diagraph G
+{
+  subgraph cluster_0{} // 子图 必须用cluster_ 开头?
+  subgraph cluster_1{}
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 1.简介
 dot是开源工具包Graphviz上用来画图的一门脚本语言。通过布局引擎解析脚本得到图像，然后可以将图像导出为各种格式以满足需求。主要用于编写脚本来画各种结构示意图和流程图。
 
@@ -12,7 +54,7 @@ digraph graph1 {
   // statement
 }
 当图中某些内容同属一个类时，我们可以申明一个子图将其包含在齐齐。使用subgraph cluster_subgraphName可以申明一个子图^1。
-
+****
 subgraph cluster_subgraphName {
   // statement
 }

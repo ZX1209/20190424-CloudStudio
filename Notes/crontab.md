@@ -1,7 +1,7 @@
 #start cron 
 service cron start
 
-#
+# 输出到终端
 /dev/tty
 
 usage: crontab [-u user] file
