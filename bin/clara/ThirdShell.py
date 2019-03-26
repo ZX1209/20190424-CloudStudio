@@ -27,13 +27,22 @@ def runCmdStrs(cmdstrs, capture_output=True, **args):
     return rs
 
 
-# def RUN(cmdstrs, **args):
-#     """
-#     cmdstrs : list[str]
-#     """
-#     cmds = [shlex.split(cmd) for cmd in cmdstrs]
-#     return runCommands(cmds, **args)
-
+def runCmdTrains(cmdstrs, capture_output=True, **args):
+    """
+    cmds is like
+    [
+        "ls -l",
+        "pwd"
+    ]
+    """
+    rs = []
+    for cmdstr in cmdstrs:
+        r = subprocess.run(shlex.split(cmdstr),
+                           capture_output=capture_output, **args)
+        if r.returncode != 0:
+            break
+        rs.append(r)
+    return rs
 
 # def startTrain(cmds):
 #     for cmd in cmds:
