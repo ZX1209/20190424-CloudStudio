@@ -8,14 +8,16 @@ import os
 
 
 if ThirdShell.NoInternetConnected():
-    pass
+    print("no internet connected")
 else:
     home = Path.home()
     os.chdir(home/'CloudStudio')
 
     ThirdShell.runCmdStrs(
-        ['git add --all',
-         'git commit -m "auto commit     by git-auto-save.py" ',
-         ' git pull ',
-         ' git push']
+        [
+            'git pull ',
+            'git add --all',
+            'git commit -m "auto commit     by git-auto-save.py" ',
+            'git push'
+        ]
     )

@@ -57,5 +57,5 @@ def NoInternetConnected():
     1 for not connected
     0 for connected
     """
-    cp = subprocess.run(["ping", "-c", "5", "1.1.1.1"], capture_output=True)
+    cp = subprocess.run(["ping", "-c", "1", "1.1.1.1"], capture_output=True)
     return cp.returncode
