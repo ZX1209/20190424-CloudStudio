@@ -15,3 +15,7 @@ compileall.compile_dir(r'/path')
 这个函数的格式如下：
 
 compile_dir(dir[, maxlevels[, ddir[, force[, rx[, quiet]]]]])
+
+命令行为：
+
+python -m compileall <dir>
