@@ -2,6 +2,25 @@ import random
 from math import sqrt,factorial
 from bisect import bisect_left
 
+def mold(x,y=None):
+    """
+    return sqrt(x**2+y**2)
+    """
+    if y==None:
+        y = x[1]
+        x = x[0]
+    return math.sqrt(x**2+y**2)
+
+def vectorAngle(v1,v2):
+    angle = math.atan2(v1[1],v1[0]) - math.atan2(v2[1],v2[0])
+
+    if angle > math.pi:
+        angle -= 2* math.pi
+    elif angle < -math.pi:
+        angle += 2*math.pi
+
+    return angle
+
 class MarkDownHelper():
     def GenOutLine(self,orders,produce=[]):
         if orders:

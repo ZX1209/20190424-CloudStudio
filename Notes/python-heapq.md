@@ -1,3 +1,10 @@
+队列是按照二叉堆来组织的
+
+使用要用其api
+heappush
+heappop
+
+
 ```python
 import heapq
 
@@ -38,7 +45,7 @@ The value returned may be larger than the item added. If that isn’t desired, c
 
 The module also offers three general purpose functions based on heaps.
 
-heapq.merge(`*`iterables, key=None, reverse=False) 
+heapq.merge(`*`iterables, key=None, reverse=False)
 Merge multiple sorted inputs into a single sorted output (for example, merge timestamped entries from multiple log files). Returns an iterator over the sorted values.
 
 Similar to sorted(itertools.chain(`*`iterables)) but returns an iterable, does not pull the data into memory all at once, and assumes that each of the input streams is already sorted (smallest to largest).

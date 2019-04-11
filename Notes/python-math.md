@@ -1,3 +1,7 @@
+# math.atan2
+math.atan2(1,0)
+
+
 # ln log(n,base=math.e)
 math.log()
 

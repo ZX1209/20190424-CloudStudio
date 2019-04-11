@@ -1,3 +1,6 @@
+# 极坐标曲线
+e=Curve((a * theta;theta),theta,-π,π)
+
 # Tangent
 切线
 
