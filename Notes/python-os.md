@@ -1,3 +1,19 @@
+# about path see pathlib.Path
+# basic
+```py
+from pathlib import Path
+p = Path('./c')
+p.resolve() # 解决符号连接
+
+p / 'c.py'
+
+p.glob(*.py)
+
+...
+```
+
+
+
 # os.path.exists() ; os.mkdir()
 ```python
 import os

@@ -1,6 +1,12 @@
 import random
 from math import sqrt,factorial
 from bisect import bisect_left
+from pathlib import Path
+
+# don't know if cwdPath always right
+cwdPath = Path('.').resolve()
+homePath = cwdPath.home()
+# 
 
 def mold(x,y=None):
     """
