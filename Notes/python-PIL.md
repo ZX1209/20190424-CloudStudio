@@ -81,7 +81,7 @@ Image是pillow库中一个非常重要的模块，提供了大量用于图像处
 >>> def img2jpg(imgFile):   #转换图像文件格式
      if type(imgFile)==str and imgFile.endswith(('.bmp', '.gif', '.png')):
           with Image.open(imgFile) as im:
-              im.convert('RGB').save(imgFile[:-3]+'jpg')   
+              im.convert('RGB').save(imgFile[:-3]+'jpg')
 >>> img2jpg('1.gif')
 >>> img2jpg('1.bmp')
 >>> img2jpg('1.png')

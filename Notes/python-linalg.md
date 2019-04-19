@@ -1,5 +1,5 @@
 # numpy.linalg or scipy.linalg
-
+# linalg是Linear Algebra的缩写
 
 # 求值
 det

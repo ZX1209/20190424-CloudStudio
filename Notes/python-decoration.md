@@ -1,3 +1,55 @@
+```py
+# 简
+def log(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kw): # 相当于最终替换的函数
+        print('start execute')
+        func(*args, **kw)
+        print('end execute')
+    return wrapper
+
+
+# 详
+def log(arg):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            if arg and isinstance(arg, str):
+                print('装饰器的参数：%s' % arg)
+            print('start execute')
+            func(*args, **kw)
+            print('end execute')
+        return wrapper
+    if callable(arg):
+        return decorator(arg)
+    # TODO: 处理 arg
+    return decorator
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##  返回函数的函数
 
 再定义一个函数用来打印日志，并在其中执行原函数：
@@ -84,7 +136,7 @@ def my_func():
 
 再看执行结果：
 
- 
+
 
 ![img](//upload-images.jianshu.io/upload_images/1633070-53302fdc8919e6a5.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/130)
 
@@ -111,7 +163,7 @@ def log(func):
 
 再执行结果：
 
- 
+
 
 ![img](//upload-images.jianshu.io/upload_images/1633070-505178189cfd0ff4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/190)
 
@@ -168,7 +220,7 @@ def my_func1(a, b, c, *, d):
 
 看下执行结果：
 
- 
+
 
 ![img](//upload-images.jianshu.io/upload_images/1633070-62238e8196d81fb8.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/227)
 
@@ -203,7 +255,7 @@ def my_func(a, b):
 
 执行结果如下：
 
- 
+
 
 ![img](//upload-images.jianshu.io/upload_images/1633070-ad1bf6edf02b680f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/217)
 
@@ -252,12 +304,11 @@ def log(arg):
 
 测试结果如下：
 
- 
 
- 
 
- 
 
- 
 
- 
+
+
+
+

@@ -4,6 +4,10 @@ o = np.random.randint(0,255,(5,5,3),dtype='uint8')
 co = o+30 # 可能溢出呢..
 ```
 
+# 线性代数 行列式
+linalg是Linear Algebra的缩写
+np.linalg
+
 # np.fill
 
 
