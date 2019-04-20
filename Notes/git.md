@@ -20,6 +20,9 @@ git branch -d branchName
 $ git checkout master
 $ git merge hotfix
 
+# 本地git仓库关联GitHub仓库
+git remote add origin git@github.com:han1202012/TabHost_Test.git
+
 
 
 
