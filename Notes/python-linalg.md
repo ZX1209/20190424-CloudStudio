@@ -1,6 +1,12 @@
 # numpy.linalg or scipy.linalg
 # linalg是Linear Algebra的缩写
 
+# 秩
+matix_rank
+
+# 矩阵 幂次 值
+matrix_power
+
 # 求值
 det
 ```py

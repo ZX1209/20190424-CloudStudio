@@ -5,6 +5,23 @@ git merge
 
 git show-branch
 
+创建仓库不一定要登录github网站,我们实际上可以在本地通过命令行进行操作
+
+git init          //git add . 和 git commit 也是必要的, 这样做会生成master主分支,否则
+                  //后续push会有报错 error: src refspec master does not match any.
+curl -u '用户名' https://api.github.com/user/repos -d '{"name":"仓库名"}'
+git remote add origin https://github.com/用户名/仓库名.git
+                 //或者使用ssh,避免输入密码
+                 //git remote add origin git@github.com:用户名/仓库名.git
+
+
+# git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+
+# add remote node
+git remote add origin {remote_url}
+git push -u origin master
+git push --set-upstream origin master
+
 # 修改上一次commit信息
 git commit --amend
 

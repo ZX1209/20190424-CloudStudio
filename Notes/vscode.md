@@ -1,3 +1,6 @@
+"python.jediEnabled": false
+
+
 vscode note??? what for
 
 $(wslpath '${file}')

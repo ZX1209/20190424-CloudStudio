@@ -3,6 +3,17 @@ pip install PyOpenGL_accelerate PyOpenGL
 or
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyopengl
 
+
+# 移动,变换
+glTranslatef
+
+# 旋转
+glRotatef
+
+# 缩放
+glScale
+
+
 初始化窗口
 11~17行基本也是固定的，
 glutInit()是用glut来初始化OpenGL的，所有的问题都交给这个函数吧，基本不用管，虽说可以接受参数的，基本无用。

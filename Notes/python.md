@@ -1,5 +1,51 @@
 # 传递任意数量参数
 
+# context management
+```py
+from contextlib import contextmanager
+
+
+class Query(object):
+
+    def __init__(self, name):
+        self.name = name
+
+    def query(self):
+        print('Query info about %s...' % self.name)
+
+
+@contextmanager
+def create_query(name):
+    print('Begin')
+    q = Query(name)
+    yield q
+    print('End')
+
+
+@contextmanager #这个decorator接受一个generator，用yield语句把with ... as var把变量输出出去，然后，with语句就可以正常地工作了：
+with create_query('Bob') as q:
+    q.query()
+
+
+# 很多时候，我们希望在某段代码执行前后自动执行特定代码，也可以用@contextmanager实现。例如：
+
+@contextmanager
+def tag(name):
+    print("<%s>" % name)
+    yield
+    print("</%s>" % name)
+
+with tag("h1"):
+    print("hello")
+    print("world")
+上述代码执行结果为：
+
+<h1>
+hello
+world
+</h1>
+```
+
 
 # 函数内改变全局变量
 加上 global 修饰
